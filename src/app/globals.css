@@ -7,6 +7,9 @@ img {
   max-height: 600px;
 }
 
+.detail {
+  word-break: break-all;
+}
 .detail img {
   object-fit: cover;
 }

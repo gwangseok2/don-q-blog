@@ -1,5 +1,5 @@
 ---
-title: "연말정산 환급액 극대화 전략: 국세청 공식 자료 100% 활용 가이드"
+title: "[TIP] 연말 정산 절세 방법 및 노하우 (2025 최신)"
 excerpt: "연말정산 미리보기부터 맞벌이 부부 전략, 2025년 변경사항까지, 환급액을 극적으로 늘리는 실전 팁을 정리했습니다."
 coverImage: "/assets/blog/tax-return-guide-2025/cover.jpg"
 date: "2025-12-13"
@@ -17,7 +17,7 @@ category: "common-tip"
 연말정산 시즌이 다가오면 가장 먼저 떠오르는 질문은 하나입니다. **“이번엔 얼마나 돌려받을까?”**
 
 좋은 소식은, 국세청 공식 자료만 제대로 활용해도 **환급액을 극대화할 수 있는 방법이 매우 많다**는 점입니다.
-출처 : [https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=search&searchInfo2262837246](https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=search&searchInfo2262837246)
+출처 : https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=search&searchInfo2262837246
 
 ---
 
