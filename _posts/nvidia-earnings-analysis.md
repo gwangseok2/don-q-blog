@@ -1,10 +1,10 @@
 ---
 title: "[종목 분석] 엔비디아(NVIDIA) 실적을 해석하는 5가지 포인트 feat.중국 수출 허용"
 excerpt: "엔비디아의 매출, 순이익, AI 데이터센터 독점 구조, 6조 충당금 반영 체력, 그리고 가장 중요한 중국 H200 판매 조건부 승인 이슈까지, 핵심 포인트를 쉽게 정리합니다."
-coverImage: "/assets/blog/nvidia-earnings-analysis/cover.jpg"
+coverImage: "/assets/blog/nvidia/cover.jpg"
 date: "2025-12-10"
 ogImage:
-  url: "/assets/blog/nvidia-earnings-analysis/cover.jpg"
+  url: "/assets/blog/nvidia/cover.jpg"
 author:
   name: "돈큐"
   picture: "/assets/blog/authors/donq.png"
