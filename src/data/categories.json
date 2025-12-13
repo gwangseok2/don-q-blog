@@ -1,0 +1,39 @@
+[
+  {
+    "name": "해외주식",
+    "slug": "foreign-stock",
+    "count": 0,
+    "children": [
+      { "name": "시장·지표 분석", "slug": "market-analysis", "count": 0 },
+      { "name": "종목 분석", "slug": "stock-analysis", "count": 0 },
+      { "name": "내 매매일지", "slug": "trading-log", "count": 0 },
+      { "name": "뉴스 & 이슈", "slug": "news-issue", "count": 0 }
+    ]
+  },
+  {
+    "name": "부동산 · 청약",
+    "slug": "real-estate-ipo",
+    "count": 0,
+    "children": [{ "name": "아파트 분석", "slug": "apartment-analysis", "count": 0 }]
+  },
+  {
+    "name": "라이프",
+    "slug": "life",
+    "count": 0,
+    "children": [
+      { "name": "맛집 후기", "slug": "food-review", "count": 0 },
+      { "name": "일상", "slug": "daily", "count": 0 },
+      { "name": "여행", "slug": "travel", "count": 0 }
+    ]
+  },
+  {
+    "name": "정보/팁",
+    "slug": "info-tip",
+    "count": 0,
+    "children": [
+      { "name": "투자 정보", "slug": "stock-tip", "count": 0 },
+      { "name": "부동산 정보", "slug": "home-tip", "count": 0 },
+      { "name": "꿀팁", "slug": "common-tip", "count": 0 }
+    ]
+  }
+]

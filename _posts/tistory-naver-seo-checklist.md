@@ -2,13 +2,14 @@
 title: "티스토리 블로그, 네이버에 잘 보이게 만드는 실전 체크리스트"
 excerpt: "티스토리 블로그를 네이버 검색에 노출시키고 상위 노출을 노리는 실전 체크리스트입니다."
 coverImage: "/assets/blog/tistory-naver-seo-checklist/cover.jpg" # 경로 수정
-date: "2025-12-12T23:00:00.000Z"
+date: "2025-12-12"
 ogImage:
   url: "/assets/blog/tistory-naver-seo-checklist/cover.jpg" # 경로 수정
 author:
   name: "돈큐"
   picture: "/assets/blog/authors/donq.png"
 preview: false
+category: "common-tip"
 ---
 
 # 티스토리 블로그, 네이버에 잘 보이게 만드는 실전 체크리스트

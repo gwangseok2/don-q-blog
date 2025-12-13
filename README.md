@@ -1,72 +1,72 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# 📚 [donq] 블로그
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+[donq] 블로그는 Next.js(App Router) 기반의 정적(Static) 블로그입니다.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
+## ⚙️ 기술 스택 (Tech Stack)
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+- **프레임워크:** Next.js (App Router)
+- **언어:** TypeScript
+- **스타일링:** Tailwind CSS
+- **콘텐츠:** Markdown / YAML Front Matter
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## 📌 주요 기능
 
-## Demo
+- **정적 생성 (SSG):** 빠른 로딩 속도와 안정성 확보
+- **계층적 카테고리:** 2 Depth 이상의 카테고리 구조 지원
+- **다이나믹 라우팅:** 카테고리별 포스트 목록 페이지 자동 생성 (`/category/[slug]`)
+- **반응형 디자인:** 모바일 및 데스크톱 환경 최적화
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+---
 
-## Deploy your own
+## 📂 콘텐츠 분류 체계 (Category Structure)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+블로그의 모든 포스트는 아래 정의된 **4가지 대분류**와 그 하위 **소분류**로 분류됩니다. 이는 독자가 원하는 정보를 쉽게 찾을 수 있도록 돕습니다.
 
-### Related examples
+| 대분류 (Slug)                         | 설명                                                     | 주요 소분류 (예시 Slug)                            |
+| :------------------------------------ | :------------------------------------------------------- | :------------------------------------------------- |
+| **해외주식** (`foreign-stock`)        | 해외 시장 및 개별 종목 투자에 대한 전문적인 분석 및 기록 | `market-analysis`, `stock-analysis`, `trading-log` |
+| **부동산 · 청약** (`real-estate-ipo`) | 부동산 시장 분석, 청약 정보, 아파트 데이터 분석          | `apartment-analysis`                               |
+| **라이프** (`life`)                   | 일상생활, 맛집, 여행 등 비재테크 분야의 경험 공유        | `food-review`, `daily`, `travel`                   |
+| **정보/팁** (`info-tip`)              | 투자, 부동산, 블로그 운영 등 폭넓은 분야의 실용적인 팁   | `stock-tip`, `home-tip`, `common-tip`              |
 
-- [AgilityCMS](/examples/cms-agilitycms)
-- [Builder.io](/examples/cms-builder-io)
-- [ButterCMS](/examples/cms-buttercms)
-- [Contentful](/examples/cms-contentful)
-- [Cosmic](/examples/cms-cosmic)
-- [DatoCMS](/examples/cms-datocms)
-- [DotCMS](/examples/cms-dotcms)
-- [Drupal](/examples/cms-drupal)
-- [Enterspeed](/examples/cms-enterspeed)
-- [Ghost](/examples/cms-ghost)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent.ai](/examples/cms-kontent-ai)
-- [MakeSwift](/examples/cms-makeswift)
-- [Payload](/examples/cms-payload)
-- [Plasmic](/examples/cms-plasmic)
-- [Prepr](/examples/cms-prepr)
-- [Prismic](/examples/cms-prismic)
-- [Sanity](/examples/cms-sanity)
-- [Sitecore XM Cloud](/examples/cms-sitecore-xmcloud)
-- [Sitefinity](/examples/cms-sitefinity)
-- [Storyblok](/examples/cms-storyblok)
-- [TakeShape](/examples/cms-takeshape)
-- [Tina](/examples/cms-tina)
-- [Umbraco](/examples/cms-umbraco)
-- [Umbraco heartcore](/examples/cms-umbraco-heartcore)
-- [Webiny](/examples/cms-webiny)
-- [WordPress](/examples/cms-wordpress)
-- [Blog Starter](/examples/blog-starter)
+### 🔍 카테고리 상세 구조
 
-## How to use
+프로젝트의 콘텐츠 구조는 `categories.json` 파일을 기반으로 하며, 현재 정의된 계층 구조는 다음과 같습니다.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example blog-starter blog-starter-app
+```json
+[
+  {
+    "name": "해외주식",
+    "slug": "foreign-stock",
+    "children": [
+      { "name": "시장·지표 분석", "slug": "market-analysis" },
+      { "name": "종목 분석", "slug": "stock-analysis" },
+      { "name": "내 매매일지", "slug": "trading-log" },
+      { "name": "뉴스 & 이슈", "slug": "news-issue" }
+    ]
+  },
+  {
+    "name": "부동산 · 청약",
+    "slug": "real-estate-ipo",
+    "children": [{ "name": "아파트 분석", "slug": "apartment-analysis" }]
+  },
+  {
+    "name": "라이프",
+    "slug": "life",
+    "children": [
+      { "name": "맛집 후기", "slug": "food-review" },
+      { "name": "일상", "slug": "daily" },
+      { "name": "여행", "slug": "travel" }
+    ]
+  },
+  {
+    "name": "정보/팁",
+    "slug": "info-tip",
+    "children": [
+      { "name": "투자 정보", "slug": "stock-tip" },
+      { "name": "부동산 정보", "slug": "home-tip" },
+      { "name": "꿀팁", "slug": "common-tip" }
+    ]
+  }
+]
 ```
-
-```bash
-yarn create next-app --example blog-starter blog-starter-app
-```
-
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
-```
-
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-# Notes
-
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
