@@ -15,14 +15,11 @@ const Alert = ({ preview }: Props) => {
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        {/* <div className="py-2 text-center text-sm">
           {preview ? (
             <>
               This page is a preview.{" "}
-              <a
-                href="/api/exit-preview"
-                className="underline hover:text-teal-300 duration-200 transition-colors"
-              >
+              <a href="/api/exit-preview" className="underline hover:text-teal-300 duration-200 transition-colors">
                 Click here
               </a>{" "}
               to exit preview mode.
@@ -39,7 +36,7 @@ const Alert = ({ preview }: Props) => {
               .
             </>
           )}
-        </div>
+        </div> */}
       </Container>
     </div>
   );

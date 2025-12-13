@@ -13,14 +13,7 @@ type Props = {
   slug: string;
 };
 
-export function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) {
+export function HeroPost({ title, coverImage, date, excerpt, author, slug }: Props) {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -28,7 +21,7 @@ export function HeroPost({
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
+          <h3 className="mb-4 text-3xl lg:text-4xl leading-tight break-keep">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}
             </Link>
@@ -38,7 +31,7 @@ export function HeroPost({
           </div>
         </div>
         <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <p className="text-lg leading-relaxed mb-4 break-keep">{excerpt}</p>
           <Avatar name={author.name} picture={author.picture} />
         </div>
       </div>
