@@ -48,25 +48,18 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   }
   const siteTitle = BLOG_NAME;
   const title = `${post.title} | ${siteTitle}`;
-  // const ogImage = {
-  //   url: "/assets/blog/default-og-image.jpg",
-  //   width: 1200,
-  //   height: 630,
-  //   alt: title,
-  // };
   const baseUrl = getBaseUrl();
 
-  console.log(post.ogImage, "dddcheck", baseUrl);
   return {
     title,
     openGraph: {
       title,
-      images: [`${baseUrl}${post.ogImage}`],
+      images: [`${baseUrl}${post.ogImage.url}`],
     },
     twitter: {
       card: "summary_large_image",
       title: title,
-      images: [post.ogImage],
+      images: [`${baseUrl}${post.ogImage.url}`],
     },
   };
 }
