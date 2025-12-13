@@ -7,6 +7,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { BLOG_NAME } from "@/lib/constants";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -45,15 +46,26 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   if (!post) {
     return notFound();
   }
-
-  const siteTitle = "돈큐의 투자 인사이트";
+  const siteTitle = BLOG_NAME;
   const title = `${post.title} | ${siteTitle}`;
+  // const ogImage = {
+  //   url: "/assets/blog/default-og-image.jpg",
+  //   width: 1200,
+  //   height: 630,
+  //   alt: title,
+  // };
 
+  console.log(post.ogImage, "dddcheck");
   return {
     title,
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      images: [post.ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      images: [post.ogImage],
     },
   };
 }

@@ -9,4 +9,4 @@ export const HOME_OG_IMAGE_URL = {
   alt: "돈큐(Don Q) 블로그 기본 이미지",
 };
 
-export const BLOG_NAME = "돈큐의 투자 인사이트";
+export const BLOG_NAME = "돈큐의 투자 인사이트(dev01)";
