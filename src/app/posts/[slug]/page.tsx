@@ -7,7 +7,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
-import { BLOG_NAME } from "@/lib/constants";
+import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -54,13 +54,14 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   //   height: 630,
   //   alt: title,
   // };
+  const baseUrl = getBaseUrl();
 
-  console.log(post.ogImage, "dddcheck");
+  console.log(post.ogImage, "dddcheck", baseUrl);
   return {
     title,
     openGraph: {
       title,
-      images: [post.ogImage],
+      images: [`${baseUrl}${post.ogImage}`],
     },
     twitter: {
       card: "summary_large_image",

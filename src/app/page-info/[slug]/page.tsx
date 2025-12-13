@@ -84,10 +84,6 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  console.log("--- generateMetadata에서 로드된 페이지 객체 확인 ---");
-  console.log(page);
-  console.log("-------------------------------------------------------");
-
   const siteTitle = BLOG_NAME;
   const title = `${page.title} | ${siteTitle}`;
   const description = page.excerpt || page.title;
