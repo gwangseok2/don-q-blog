@@ -10,6 +10,7 @@ import { PostBody } from "@/app/_components/post-body"; // 포스팅 본문 렌�
 
 // 페이지 정보를 위한 타입 정의 (Post와 달리 필수 정보만 포함)
 type Page = {
+  slug: string;
   title: string;
   date: string;
   content: string;
