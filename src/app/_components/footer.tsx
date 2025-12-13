@@ -32,7 +32,8 @@
 // export default Footer;
 
 import Container from "@/app/_components/container";
-// import { EXAMPLE_PATH } from "@/lib/constants"; // 더 이상 사용하지 않아 주석 처리하거나 삭제 가능
+import { BLOG_NAME } from "@/lib/constants";
+import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,7 +45,9 @@ export function Footer() {
         <div className="py-12 flex flex-col items-center">
           {/* 블로그 제목 및 저작권 정보 */}
           <h3 className="text-2xl font-bold tracking-tight text-center mb-6 text-gray-800 dark:text-white">
-            돈큐(Don Q)의 머니로그
+            <Link href="/" className="hover:underline">
+              {BLOG_NAME}
+            </Link>
           </h3>
 
           {/* 필수 링크 섹션 */}
@@ -76,7 +79,7 @@ export function Footer() {
 
           {/* 저작권 및 면책 문구 */}
           <div className="mt-8 text-xs text-center text-gray-400">
-            © {currentYear} 돈큐(Don Q)의 머니로그. All rights reserved. <br />
+            © {currentYear} {BLOG_NAME}. All rights reserved. <br />
             <p className="mt-1">
               <span className="font-bold text-red-500 dark:text-red-400">면책 조항:</span> 본 사이트의 모든 정보는 투자
               권유가 아닙니다. 투자 책임은 본인에게 있습니다.

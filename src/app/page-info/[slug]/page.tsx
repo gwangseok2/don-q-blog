@@ -82,7 +82,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const siteTitle = "돈큐(Don Q)의 머니로그";
+  const siteTitle = "돈큐의 투자 인사이트";
   const title = `${page.title} | ${siteTitle}`;
   const description = page.excerpt || page.title;
 

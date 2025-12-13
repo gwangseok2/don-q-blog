@@ -47,7 +47,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const siteTitle = "돈큐의 투자 블로그";
+  const siteTitle = "돈큐의 투자 인사이트";
   const title = `${post.title} | ${siteTitle}`;
 
   return {
