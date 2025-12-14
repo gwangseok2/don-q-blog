@@ -12,3 +12,24 @@ img {
 .detail img {
   object-fit: cover;
 }
+
+.coupang-container {
+  display: flex;
+  position: relative;
+}
+
+.coupang-container iframe {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.coupang-container::after {
+  content: "이 포스팅은 쿠팡 파트너스 활동의 일한으로, 이에 따른 일정액의 수수료를 제공받습니다.";
+  font-size: 8px;
+  word-break: keep-all;
+  color: #888;
+  position: absolute;
+  line-height: 1.2;
+  text-align: center;
+  top: calc(100% + 5px);
+}
