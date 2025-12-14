@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `${BLOG_NAME}`,
-  description: `돈큐(Don Q)는 연말정산, 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다. 당신의 경제적 자유를 위한 실전 가이드.`,
+  description: `돈큐(Don Q)는 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다.`,
   openGraph: {
     title: BLOG_NAME,
     images: [HOME_OG_IMAGE_URL],
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   other: {
     "naver-site-verification": "ac682923470a49e562ddc6e508b56bbac27acae2",
+    "google-adsense-account": "ca-pub-2473172921530585",
   },
 };
 
