@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BLOG_NAME } from "@/lib/constants";
 import { getDynamicCategories } from "@/lib/categories";
 
-const CATEGORY_KEYS = {
+export const CATEGORY_KEYS = {
   // 대분류
   "foreign-stock": "해외주식",
   "real-estate-ipo": "부동산 · 청약",
@@ -30,7 +30,7 @@ const CATEGORY_KEYS = {
 };
 
 // CATEGORY_KEYS의 키들만 추출하여 타입으로 사용합니다.
-type CategorySlug = keyof typeof CATEGORY_KEYS;
+export type CategorySlug = keyof typeof CATEGORY_KEYS;
 
 // 🚨 Props 인터페이스 정의: categorySlug는 CategorySlug 타입이어야 합니다.
 interface HeaderProps {

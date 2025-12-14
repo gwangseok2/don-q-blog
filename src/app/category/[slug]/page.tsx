@@ -7,6 +7,9 @@ import Header from "@/app/_components/header";
 // 🚨 categories.json 파일을 raw 데이터로 임포트합니다.
 import rawCategories from "@/data/categories.json";
 
+// 🚨 Header 컴포넌트에서 정의된 유효한 슬러그 목록을 가져옵니다.
+import { CATEGORY_KEYS, CategorySlug } from "@/app/_components/header";
+
 // ------------------------------------------------------------------
 // Helper Type & Constants
 // ------------------------------------------------------------------
@@ -34,17 +37,12 @@ export async function generateStaticParams() {
 
 function findCategoryNameBySlug(slug: string, categories: Category[]): string | undefined {
   for (const cat of categories) {
-    // 1. 현재 레벨의 슬러그와 일치하는지 확인
     if (cat.slug === slug) {
-      return cat.name; // 찾았으면 이름 반환
+      return cat.name;
     }
 
-    // 2. 자식 카테고리가 있으면 재귀적으로 탐색
     if (cat.children && cat.children.length > 0) {
-      // 자식 배열을 재귀 호출하여 결과를 받습니다.
       const foundName = findCategoryNameBySlug(slug, cat.children);
-
-      // 재귀 호출에서 이름을 찾았다면, 여기서 바로 반환하고 탐색을 종료합니다.
       if (foundName) {
         return foundName;
       }
@@ -57,15 +55,14 @@ function findCategoryNameBySlug(slug: string, categories: Category[]): string | 
 // 3. Category Page Component
 // ------------------------------------------------------------------
 
-// 🚨 수정: props 객체를 받고 내부에서 await를 사용하여 params를 추출합니다.
 export default async function CategoryPage(props: { params: { slug: string } }) {
-  // 🚨 강제 수정: Next.js 에러 메시지에 따라 params를 await하여 Promise를 해제합니다.
   const params = await props.params;
 
-  const { slug: categorySlug } = params;
+  // 🚨 1. URL 파라미터에서 string 타입의 slug를 가져옵니다.
+  const rawCategorySlug: string = params.slug;
 
   // URL 경로가 유효하지 않은 경우 대비
-  if (!categorySlug) {
+  if (!rawCategorySlug) {
     return (
       <main>
         <Container>
@@ -75,12 +72,23 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
     );
   }
 
-  const allPosts = getPostsByCategory(categorySlug);
+  //  2. 유효성 검사 및 타입 단언 로직 추가 (타입 오류 해결)
+  // rawCategorySlug가 CATEGORY_KEYS의 키 목록에 포함되는지 확인합니다.
+  const isCategoryValid = Object.keys(CATEGORY_KEYS).includes(rawCategorySlug);
 
-  // 카테고리 이름 찾기: 실패하면 슬러그를 사용합니다. (예: foreign-stock)
-  const categoryName = findCategoryNameBySlug(categorySlug, baseCategories) || categorySlug;
+  //  3. Header 컴포넌트에 전달할 안전한 categorySlug를 생성합니다.
+  // 유효하면 CategorySlug 타입으로 단언하고, 아니면 undefined를 할당합니다.
+  const safeCategorySlug: CategorySlug | undefined = isCategoryValid ? (rawCategorySlug as CategorySlug) : undefined;
 
-  // 🚨 페이지 제목 설정
+  // 4. 나머지 로직은 safeCategorySlug 또는 rawCategorySlug를 사용하여 진행합니다.
+
+  // getPostsByCategory는 string 타입 인수를 받도록 가정합니다.
+  const allPosts = getPostsByCategory(rawCategorySlug);
+
+  // 카테고리 이름 찾기: findCategoryNameBySlug는 string을 인수로 받습니다.
+  const categoryName = findCategoryNameBySlug(rawCategorySlug, baseCategories) || rawCategorySlug;
+
+  //  페이지 제목 설정 (기존과 동일)
   const pageTitle = `${categoryName}`;
 
   if (allPosts.length === 0) {
@@ -88,8 +96,9 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
     return (
       <main>
         <Container>
-          <Header categorySlug={categorySlug} />
-          {/* 🚨 h2 태그로 제목을 직접 표시 */}
+          {/*  Header에 safeCategorySlug 전달 (undefined도 허용) */}
+          <Header categorySlug={safeCategorySlug} />
+
           <p className="mt-8 text-lg text-gray-600">
             아직 &quot;{categoryName}&quot; 카테고리에 게시된 포스트가 없습니다. 다른 카테고리를 탐색해보세요!
           </p>
@@ -105,7 +114,8 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
   return (
     <main>
       <Container>
-        <Header categorySlug={categorySlug} />
+        {/* 🚨 Header에 safeCategorySlug 전달 */}
+        <Header categorySlug={safeCategorySlug} />
 
         <HeroPost
           title={heroPost.title}
