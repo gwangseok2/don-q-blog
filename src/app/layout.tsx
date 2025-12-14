@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     images: [HOME_OG_IMAGE_URL],
     type: "website",
   },
+  other: {
+    "naver-site-verification": "ac682923470a49e562ddc6e508b56bbac27acae2",
+  },
 };
 
 export default function RootLayout({
