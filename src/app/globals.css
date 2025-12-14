@@ -15,10 +15,11 @@ img {
 
 /* coupang */
 .coupang-search-container {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .coupang-container {
+  margin-top: -20px;
   display: flex;
   position: relative;
 }
@@ -26,6 +27,7 @@ img {
 .coupang-container iframe {
   margin: 0 auto;
   width: 50%;
+  height: 240px;
 }
 
 .coupang-container::after {
