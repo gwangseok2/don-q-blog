@@ -6,6 +6,7 @@ import cn from "classnames";
 // import { ThemeSwitcher } from "./_components/theme-switcher";
 import "./globals.css";
 import SidebarWrapper from "@/app/_components/side-bar-wrapper"; // 🚨 Wrapper 임포트
+import Script from "next/script"; // next/script 임포트
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,13 +27,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+        {/* GA */}
+        <Script
+          strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
+          src={`https://www.googletagmanager.com/gtag/js?id=G-TH6V971WLZ`} // YOUR_GA_MEASUREMENT_ID를 본인의 ID로 변경
+        />
+        {/* 2. GA 초기화 및 설정 스크립트 */}
+        <Script
+          id="google-analytics" // 스크립트 ID
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-TH6V971WLZ');
+            `,
+          }}
+        />
+        <link rel="canonical" href="https://donqlog.com/" />
+        <link rel="icon" href="/favicon/favicon.ico?v=1" type="image/x-icon" />
         <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       {/* ... */}
       <body className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}>
