@@ -13,13 +13,16 @@ img {
   object-fit: cover;
 }
 
+.menu-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* coupang */
 .coupang-search-container {
   margin-bottom: 5px;
 }
 
 .coupang-container {
-  margin-top: -20px;
   display: flex;
   position: relative;
 }

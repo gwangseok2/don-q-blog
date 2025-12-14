@@ -14,7 +14,7 @@ const CategoryItem: FC<{ category: Category; onLinkClick: () => void }> = ({ cat
   const href = `/category/${category.slug}`;
 
   return (
-    <li className={isParent ? "mb-6" : "mb-1"}>
+    <li className={isParent ? "lg:mb-5 mb-3" : "mb-1"}>
       <Link href={href} className="text-gray-700 hover:text-blue-600 transition-colors" onClick={onLinkClick}>
         <span className={isParent ? "font-bold text-base" : "text-sm"}>
           {category.name} ({category.count})
@@ -37,7 +37,7 @@ const CategoryList: FC<{ categories: Category[]; onLinkClick: () => void }> = ({
 
   return (
     // 중첩된 ul에 대해 들여쓰기 적용 (pl-4)
-    <ul className="pl-4 list-none">
+    <ul className="pl-4 list-none menu-list">
       {categories.map((cat) => (
         <CategoryItem key={cat.slug} category={cat} onLinkClick={onLinkClick} />
       ))}
