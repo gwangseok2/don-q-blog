@@ -95,6 +95,17 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
           ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
+        {/* coupang search */}
+        <div className="coupang-search-container">
+          <iframe
+            src="https://coupa.ng/ck1Pnq"
+            width="100%"
+            height="36"
+            frameBorder="0"
+            scrolling="no"
+            referrerPolicy="unsafe-url"
+          ></iframe>
+        </div>
         <div className="md:mt-0 mt-0">
           {/* <h2 className="text-xl font-bold mb-4 border-b pb-2 text-gray-800">분류 전체보기 ({totalCount})</h2> */}
           <CategoryList categories={initialCategories} onLinkClick={handleLinkClick} />

@@ -13,6 +13,11 @@ img {
   object-fit: cover;
 }
 
+/* coupang */
+.coupang-search-container {
+  margin-bottom: 10px;
+}
+
 .coupang-container {
   display: flex;
   position: relative;
