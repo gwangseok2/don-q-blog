@@ -10,12 +10,32 @@ import Script from "next/script"; // next/script 임포트
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${BLOG_NAME}`,
+  title: {
+    default: BLOG_NAME,
+    template: `%s | ${BLOG_NAME}`,
+  },
   description: `돈큐(Don Q)는 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다.`,
+  alternates: {
+    canonical: "https://donqlog.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: BLOG_NAME,
-    images: [HOME_OG_IMAGE_URL],
     type: "website",
+    url: "https://donqlog.com",
+    title: BLOG_NAME,
+    description: `돈큐(Don Q)는 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다.`,
+    siteName: BLOG_NAME,
+    locale: "ko_KR",
+    images: [HOME_OG_IMAGE_URL],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: BLOG_NAME,
+    description: `돈큐(Don Q)는 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다.`,
+    images: [HOME_OG_IMAGE_URL],
   },
   other: {
     "naver-site-verification": "ac682923470a49e562ddc6e508b56bbac27acae2",
@@ -29,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ko" suppressHydrationWarning>
       <head>
         {/* GA */}
         <Script
@@ -49,7 +69,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <link rel="canonical" href="https://donqlog.com/" />
         <link rel="icon" href="/favicon/favicon.ico?v=1" type="image/x-icon" />
         <meta name="theme-color" content="#000" />
       </head>

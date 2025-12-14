@@ -88,9 +88,8 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
     return (
       <main>
         <Container>
-          <Header />
+          <Header categorySlug={categorySlug} />
           {/* 🚨 h2 태그로 제목을 직접 표시 */}
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8 mb-8">{pageTitle}</h2>
           <p className="mt-8 text-lg text-gray-600">
             아직 &quot;{categoryName}&quot; 카테고리에 게시된 포스트가 없습니다. 다른 카테고리를 탐색해보세요!
           </p>
@@ -106,8 +105,7 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
   return (
     <main>
       <Container>
-        <Header />
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight md:pr-8 mb-8">{pageTitle}</h2>
+        <Header categorySlug={categorySlug} />
 
         <HeroPost
           title={heroPost.title}
