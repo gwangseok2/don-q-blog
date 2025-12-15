@@ -2,7 +2,7 @@
 title: "[실적 리뷰] 아이렌(IREN) Q1 FY26"
 excerpt: "아이렌(IREN)이 Q1 FY26 실적에서 AI/HPC 인프라 기업으로의 전환을 숫자로 증명하기 시작했다."
 coverImage: "/assets/blog/iren-q1-fy26/cover.png"
-date: "2025-12-14"
+date: "2025-12-15"
 ogImage:
   url: "/assets/blog/iren-q1-fy26/cover.png"
 author:
