@@ -93,7 +93,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
   const siteTitle = BLOG_NAME;
-  const title = `${post.title} | ${siteTitle}`;
+  const title = `${post.title}`;
   const baseUrl = getBaseUrl();
   const description = post.excerpt || post.title;
   const url = `${baseUrl}/posts/${post.slug}`;
