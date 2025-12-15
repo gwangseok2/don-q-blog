@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react"; // 🚨 useEffect를 추가합니다.
 import CategoryList from "@/app/_components/category-list";
 import { Category } from "@/lib/categories";
+import CoupangAdsFrame from "@/app/_components/coupang-ads-frame";
 
 // 🚨 SidebarWrapper로부터 받을 props의 타입 정의
 interface SidebarProps {
@@ -110,22 +111,8 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
           {/* <h2 className="text-xl font-bold mb-4 border-b pb-2 text-gray-800">분류 전체보기 ({totalCount})</h2> */}
           <CategoryList categories={initialCategories} onLinkClick={handleLinkClick} />
           <div className="coupang-container">
-            <iframe
-              src="https://coupa.ng/ck1OCq"
-              width="120"
-              height="240"
-              frameBorder="10"
-              scrolling="no"
-              referrerPolicy="unsafe-url"
-            ></iframe>
-            <iframe
-              src="https://coupa.ng/ck1OWO"
-              width="120"
-              height="240"
-              frameBorder="10"
-              scrolling="no"
-              referrerPolicy="unsafe-url"
-            ></iframe>
+            <CoupangAdsFrame src={"https://coupa.ng/ck1OCq"} width="50%" height="240px" className="coupang-widget" />
+            <CoupangAdsFrame src={"https://coupa.ng/ck2naW"} width="50%" height="240px" className="coupang-widget" />
           </div>
         </div>
       </nav>

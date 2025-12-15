@@ -13,6 +13,8 @@ import Script from "next/script";
 // Header 컴포넌트에서 정의된 유효한 슬러그 목록 정보를 import 합니다.
 import { CATEGORY_KEYS, CategorySlug } from "@/app/_components/header";
 
+import CoupangAdsFrame from "@/app/_components/coupang-ads-frame";
+
 export default async function Post(props: Params) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -73,6 +75,17 @@ export default async function Post(props: Params) {
         <article className="mb-32 detail">
           <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
           <PostBody content={content} />
+          <div className="coupang">
+            <CoupangAdsFrame
+              src={
+                "https://ads-partners.coupang.com/widgets.html?id=950617&template=carousel&trackingCode=AF6817558&subId=&width=1024&height=150&tsource="
+              }
+              width="100%"
+              height="150px"
+              title="쿠팡 추천 위젯"
+              className="coupang-widget"
+            />
+          </div>
         </article>
       </Container>
     </main>

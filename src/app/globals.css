@@ -26,14 +26,16 @@ img {
   display: flex;
   position: relative;
 }
+.coupang {
+  position: relative;
+}
 
 .coupang-container iframe {
   margin: 0 auto;
-  width: 50%;
-  height: 240px;
 }
 
-.coupang-container::after {
+.coupang-container::after,
+.coupang::after {
   content: "이 포스팅은 쿠팡 파트너스 활동의 일한으로, 이에 따른 일정액의 수수료를 제공받습니다.";
   font-size: 8px;
   word-break: keep-all;
