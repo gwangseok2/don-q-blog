@@ -7,6 +7,16 @@ import cn from "classnames";
 import "./globals.css";
 import SidebarWrapper from "@/app/_components/side-bar-wrapper"; // 🚨 Wrapper 임포트
 import Script from "next/script"; // next/script 임포트
+
+import type { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
+};
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

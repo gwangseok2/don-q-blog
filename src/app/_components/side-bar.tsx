@@ -89,14 +89,14 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
       {/* 2. 사이드바 본체 (기존 코드와 동일) */}
       <nav
         className={`
-          fixed top-0 left-0 h-full w-64 bg-gray-50 p-6 pt-10
+          fixed top-0 left-0 h-full w-64 bg-gray-50 lg:p-6 pt-10 px-6 pb-20
           shadow-xl transition-transform duration-300 z-40 
-          md:sticky md:top-0 md:h-screen md:w-64 md:transform-none md:bg-gray-50 md:shadow-none
+          md:sticky md:top-0 md:h-screen md:w-64 md:transform-none md:bg-gray-50 md:shadow-none overflow-y-scroll lg:overflow-hidden
           ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
         {/* coupang search */}
-        <div className="coupang-search-container">
+        <div className="coupang-search-container mb-2.5">
           <iframe
             src="https://coupa.ng/ck1Pnq"
             width="100%"
