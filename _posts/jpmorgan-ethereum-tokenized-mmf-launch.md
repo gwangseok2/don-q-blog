@@ -9,7 +9,7 @@ author:
   name: "돈큐"
   picture: "/assets/blog/authors/donq.png"
 preview: false
-category: "stock-analysis"
+category: "news-issue"
 categoryName: "해외주식"
 ---
 
