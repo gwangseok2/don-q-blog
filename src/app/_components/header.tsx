@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BLOG_NAME } from "@/lib/constants";
-import { getDynamicCategories } from "@/lib/categories";
 
 export const CATEGORY_KEYS = {
   // 대분류
