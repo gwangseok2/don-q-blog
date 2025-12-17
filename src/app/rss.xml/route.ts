@@ -1,19 +1,16 @@
 import { getAllPosts } from "@/lib/api";
 import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 
-// 정적 내보내기(output: export)를 위한 설정
 export const dynamic = "force-static";
 
 export async function GET() {
   const allPosts = getAllPosts();
   const baseUrl = getBaseUrl();
 
-  // 1. 아이템 생성 시 앞뒤 공백 제거 (trim 사용)
   const itemsXml = allPosts
     .map((post) => {
       const url = `${baseUrl}/posts/${post.slug}`;
-      return `
-    <item>
+      return `    <item>
       <title><![CDATA[${post.title.trim()}]]></title>
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
@@ -23,10 +20,10 @@ export async function GET() {
       <category><![CDATA[${post.category.trim()}]]></category>
     </item>`;
     })
-    .join("");
+    .join("\n");
 
-  // 2. XML 구조 생성 (불필요한 공백 및 태그 제거)
-  const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
+  // XML 선언문 바로 앞에 공백이나 줄바꿈이 없어야 합니다.
+  const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title><![CDATA[${BLOG_NAME}]]></title>
@@ -37,11 +34,11 @@ export async function GET() {
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
     ${itemsXml}
   </channel>
-</rss>`.trim(); // 전체 문자열 앞뒤 공백 제거
+</rss>`.trim();
 
   return new Response(rssXml, {
     headers: {
-      // charset을 명시하여 한글 깨짐 방지
+      // application/rss+xml 대신 application/xml을 사용해 브라우저 간섭을 줄입니다.
       "Content-Type": "application/xml; charset=utf-8",
       "Cache-Control": "s-maxage=3600, stale-while-revalidate",
     },
