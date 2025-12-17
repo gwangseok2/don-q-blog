@@ -1,85 +1,47 @@
-import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllPosts } from "@/lib/api";
+import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 
-const SITE_URL = "https://도메인주소";
-const SITE_TITLE = "돈큐 블로그";
-const SITE_DESC = "투자 · 테크 · 이슈 분석";
-
-type Post = {
-  title: string;
-  excerpt: string;
-  slug: string;
-  date: string;
-  coverImage?: string;
-  category?: string;
-  author?: string;
-};
-
-function getPosts(): Post[] {
-  const postsDir = path.join(process.cwd(), "content/posts");
-
-  return fs
-    .readdirSync(postsDir)
-    .filter((file) => file.endsWith(".mdx"))
-    .map((file) => {
-      const source = fs.readFileSync(path.join(postsDir, file), "utf8");
-
-      const { data } = matter(source);
-
-      return {
-        title: data.title,
-        excerpt: data.excerpt,
-        slug: file.replace(/\.mdx$/, ""),
-        date: data.date,
-        coverImage: data.coverImage,
-        category: data.category,
-        author: data.author?.name,
-      };
-    })
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .slice(0, 30);
-}
+export const dynamic = "force-static";
 
 export async function GET() {
-  const posts = getPosts();
+  const allPosts = getAllPosts();
+  const baseUrl = getBaseUrl();
 
-  const items = posts
+  // RSS XML 아이템 리스트 생성
+  const itemsXml = allPosts
     .map((post) => {
-      const link = `${SITE_URL}/blog/${post.slug}`;
-      const imageUrl = post.coverImage ? `${SITE_URL}${post.coverImage}` : null;
-
+      const url = `${baseUrl}/posts/${post.slug}`;
       return `
-<item>
-  <title><![CDATA[${post.title}]]></title>
-  <description><![CDATA[${post.excerpt}]]></description>
-  <link>${link}</link>
-  <guid>${link}</guid>
-  <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-  ${post.category ? `<category>${post.category}</category>` : ""}
-  ${post.author ? `<author>${post.author}</author>` : ""}
-  ${imageUrl ? `<enclosure url="${imageUrl}" type="image/png" />` : ""}
-</item>`;
+    <item>
+      <title><![CDATA[${post.title}]]></title>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
+      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <description><![CDATA[${post.excerpt || ""}]]></description>
+      <author><![CDATA[${post.author.name}]]></author>
+      <category><![CDATA[${post.category}]]></category>
+    </item>`;
     })
     .join("");
 
-  const rss = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:media="http://search.yahoo.com/mrss/">
+  // 전체 RSS XML 구조 생성
+  const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${SITE_TITLE}</title>
-    <link>${SITE_URL}</link>
-    <description>${SITE_DESC}</description>
+    <title><![CDATA[${BLOG_NAME}]]></title>
+    <link>${baseUrl}</link>
+    <description><![CDATA[${BLOG_NAME} - 투자 인사이트 및 금융 정보 블로그]]></description>
+    <language>ko</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    ${items}
+    <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml" />
+    ${itemsXml}
   </channel>
 </rss>`;
 
-  return new NextResponse(rss, {
+  return new Response(rssXml, {
     headers: {
-      "Content-Type": "application/rss+xml; charset=UTF-8",
-      "Cache-Control": "no-store",
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "s-maxage=3600, stale-while-revalidate",
     },
   });
 }
