@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = getAllPages();
 
   const pageEntries: MetadataRoute.Sitemap = pages.map((page: any) => ({
-    url: `${baseUrl}/${page.slug}`, // date가 없을 경우 (정적 페이지) 빌드 시점의 시간을 사용하도록 안전 장치 추가
+    url: `${baseUrl}/page-info/${page.slug}`, // date가 없을 경우 (정적 페이지) 빌드 시점의 시간을 사용하도록 안전 장치 추가
     lastModified: new Date(page.date || Date.now()).toISOString(),
     priority: 0.8,
   })); // ---------------------------------------------------- // 2. 블로그 포스팅 항목 생성 (Posts) // ----------------------------------------------------
