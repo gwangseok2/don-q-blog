@@ -82,7 +82,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <link rel="icon" href="/favicon/favicon.png" type="image/x-icon" />
         <meta name="theme-color" content="#000" />
       </head>
       {/* ... */}
