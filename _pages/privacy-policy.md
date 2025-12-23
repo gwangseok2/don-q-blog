@@ -5,7 +5,7 @@ slug: "privacy-policy"
 preview: false
 ---
 
-# 개인정보 처리방침 (Privacy Policy)
+## 개인정보 처리방침 (Privacy Policy)
 
 본 사이트 <strong>「돈큐의 투자 인사이트」</strong>는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령을 준수하고 있습니다.
 

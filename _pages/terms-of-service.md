@@ -5,7 +5,7 @@ slug: "terms-of-service"
 preview: false
 ---
 
-# 이용 약관 및 면책 조항 (Disclaimer)
+## 이용 약관 및 면책 조항 (Disclaimer)
 
 본 블로그에 게시된 모든 콘텐츠(분석, 투자 기록, 의견 등)를 이용하는 조건은 다음과 같습니다. **투자 관련 정보 이용 전 반드시 숙지해 주십시오.**
 
