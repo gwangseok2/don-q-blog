@@ -45,3 +45,13 @@ img {
   text-align: center;
   top: calc(100% + 5px);
 }
+
+blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #3b82f6; /* blue-500 */
+  background: #f8fafc; /* slate-50 */
+  color: #334155; /* slate-700 */
+  font-style: italic;
+  line-height: 1.75;
+}
