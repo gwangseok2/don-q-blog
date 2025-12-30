@@ -111,8 +111,8 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
           {/* <h2 className="text-xl font-bold mb-4 border-b pb-2 text-gray-800">분류 전체보기 ({totalCount})</h2> */}
           <CategoryList categories={initialCategories} onLinkClick={handleLinkClick} />
           <div className="coupang-container">
-            <CoupangAdsFrame src={"https://coupa.ng/ck1OCq"} width="50%" height="240px" className="coupang-widget" />
-            <CoupangAdsFrame src={"https://coupa.ng/ck2naW"} width="50%" height="240px" className="coupang-widget" />
+            <CoupangAdsFrame src={"https://coupa.ng/clbckR"} width="50%" height="240px" className="coupang-widget" />
+            <CoupangAdsFrame src={"https://coupa.ng/clbcmV"} width="50%" height="240px" className="coupang-widget" />
           </div>
         </div>
       </nav>
