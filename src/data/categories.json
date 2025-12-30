@@ -11,12 +11,6 @@
     ]
   },
   {
-    "name": "부동산 · 청약",
-    "slug": "real-estate-ipo",
-    "count": 0,
-    "children": [{ "name": "아파트 분석", "slug": "apartment-analysis", "count": 0 }]
-  },
-  {
     "name": "라이프",
     "slug": "life",
     "count": 0,
