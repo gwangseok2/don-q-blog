@@ -82,10 +82,18 @@ export default function RootLayout({
             `,
           }}
         />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2473172921530585"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <meta name="theme-color" content="#000" />
       </head>
       {/* ... */}
-      <body className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}>
+      <body
+        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+      >
         <div className="flex min-h-screen">
           {/* 🚨 SidebarWrapper를 사용합니다. */}
           <SidebarWrapper />
