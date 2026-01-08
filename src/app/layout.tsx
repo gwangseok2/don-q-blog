@@ -98,7 +98,7 @@ export default function RootLayout({
           {/* 🚨 SidebarWrapper를 사용합니다. */}
           <SidebarWrapper />
 
-          <main className="flex-1 p-4">
+          <main className="flex-1">
             {/* ... */}
             {children}
           </main>
