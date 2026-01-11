@@ -1,5 +1,5 @@
 ---
-title: "AI 인프라 주문이 터졌다 | Vertiv 3Q25 (VRT) 실적 리뷰"
+title: "AI 인프라 주문이 터졌다 | 버티브 홀딩스 3Q25 (VRT) 실적 리뷰"
 excerpt: "Vertiv 3Q25 실적 요약. AI 데이터센터 주문 폭발, 백로그 급증, 마진 개선, 가이던스 상향까지 핵심 숫자를 정리했습니다."
 coverImage: "/assets/blog/vertiv-q3-2025-earnings/cover.png"
 date: "2026-01-11"
@@ -14,7 +14,7 @@ category: "stock-analysis"
 
 ## 📌 AI 인프라, 드디어 ‘주문(Orders)’이 폭발했다
 
-**자료 출처**: Vertiv 3Q25 Earnings Release (Exhibit)  
+**자료 출처**: Vertiv 3Q25 Earnings Release
 **환율 가정**: 1달러 = 1,450원
 
 ---
@@ -34,7 +34,7 @@ category: "stock-analysis"
 
 ## ⭐ 3Q25 핵심 요약 (이 분기에서 제일 중요한 것만)
 
-이번 분기 버티브는 **성장 + 수익성 + 주문**이 동시에 좋아졌다.
+이번 분기 버티브 홀딩스는 **성장 + 수익성 + 주문**이 동시에 좋아졌다.
 
 - **매출(Net Sales, 총매출)**: **$2,675.8M** (약 **3조 8,799억 원**) / YoY **+29.0%**
 - **유기적 성장(Organic Sales Growth, M&A/환율 영향 제외 성장)**: **+24%**
