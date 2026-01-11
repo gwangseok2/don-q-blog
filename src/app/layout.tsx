@@ -91,17 +91,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
       </head>
       {/* ... */}
-      <body
-        className={cn(
-          inter.className,
-          "dark:bg-slate-900 dark:text-slate-400 overflow-x-hidden"
-        )}
-      >
+      <body className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400 overflow-x-hidden")}>
         <div className="flex min-h-screen">
           {/* 🚨 SidebarWrapper를 사용합니다. */}
           <SidebarWrapper />
 
-          <main className="flex-1 p-4">
+          <main className="flex-1 p-8">
             {/* ... */}
             {children}
           </main>
