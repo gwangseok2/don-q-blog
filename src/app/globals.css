@@ -58,8 +58,5 @@ blockquote {
 
 .google-auto-placed {
   /* width: 0 !important; */
-  width: 89.33%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  padding: 0 20px;
 }
