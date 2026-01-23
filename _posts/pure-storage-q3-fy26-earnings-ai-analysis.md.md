@@ -2,11 +2,13 @@
 title: "[시장 분석] 퓨어스토리지, AI 인프라와 구독 모델로 '1.4조 원' 매출 돌파... 성장 가속화"
 excerpt: "퓨어스토리지가 2026 회계연도 3분기 매출 약 1조 3,985억 원을 기록하며 시장 기대를 뛰어넘었습니다. 구독 모델의 안착과 AI 수요 폭발이 실적 성장을 견인하고 있습니다."
 coverImage: "/assets/blog/pure-storage-q3-fy26-earnings-ai-analysis/cover.png"
-date: "2026-01-21"
+ogImage:
+  url: "/assets/blog/pure-storage-q3-fy26-earnings-ai-analysis/cover.png"
+date: "2026-01-23"
 author:
   name: "돈큐"
   picture: "/assets/blog/authors/donq.png"
-category: "IT/기업분석"
+category: "stock-analysis"
 ---
 
 최근 글로벌 데이터 시장은 단순한 저장 장치 구매를 넘어, 인공지능(AI) 연산에 최적화된 데이터를 효율적으로 공급하는 '플랫폼' 중심으로 빠르게 재편되고 있어. 이러한 흐름 속에서 **퓨어스토리지(Pure Storage)**가 발표한 2026 회계연도 3분기(Q3 FY26) 실적은 업계에 매우 중요한 시그널을 주고 있지. 단순히 하드웨어를 파는 제조사를 넘어, 고수익 구독형 서비스 기업으로 완벽하게 체질 개선에 성공한 퓨어스토리지의 성과를 세밀하게 분석해봤어.
