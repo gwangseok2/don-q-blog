@@ -1,4 +1,4 @@
 User-agent: *
 Allow:/
 
-Sitemap: https://donglog.com/sitemap.xml
+Sitemap: https://donqlog.com/sitemap.xml

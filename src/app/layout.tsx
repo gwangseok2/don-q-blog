@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   },
   description: `돈큐(Don Q)는 해외주식, 부동산, 라이프스타일 전반의 실질적인 재테크 꿀팁과 깊이 있는 투자 정보를 제공합니다.`,
   alternates: {
-    canonical: "https://donqlog.com",
     types: {
       "application/rss+xml": "/rss.xml",
     },

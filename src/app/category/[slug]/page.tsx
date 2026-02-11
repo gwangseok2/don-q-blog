@@ -3,6 +3,8 @@ import { HeroPost } from "@/app/_components/hero-post";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getPostsByCategory, getAllCategorySlugs } from "@/lib/api";
 import Header from "@/app/_components/header";
+import { Metadata } from "next";
+import { getBaseUrl } from "@/lib/constants";
 
 // 🚨 categories.json 파일을 raw 데이터로 임포트합니다.
 import rawCategories from "@/data/categories.json";
@@ -49,6 +51,29 @@ function findCategoryNameBySlug(slug: string, categories: Category[]): string | 
     }
   }
   return undefined;
+}
+
+// 2. Metadata 생성 (SEO)
+// ------------------------------------------------------------------
+export async function generateMetadata(props: { params: { slug: string } }): Promise<Metadata> {
+  const params = await props.params;
+  const rawCategorySlug = params.slug;
+  const categoryName = findCategoryNameBySlug(rawCategorySlug, baseCategories) || rawCategorySlug;
+  const baseUrl = getBaseUrl();
+  const url = `${baseUrl}/category/${rawCategorySlug}`;
+
+  return {
+    title: `${categoryName} | 돈큐`,
+    description: `${categoryName} 카테고리의 다양한 투자 정보와 꿀팁을 확인해 보세요.`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${categoryName} | 돈큐`,
+      description: `${categoryName} 카테고리의 다양한 투자 정보와 꿀팁을 확인해 보세요.`,
+      url: url,
+    },
+  };
 }
 
 // ------------------------------------------------------------------

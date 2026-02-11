@@ -3,6 +3,14 @@ import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
+import { Metadata } from "next";
+import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: getBaseUrl(),
+  },
+};
 
 export default function Index() {
   const allPosts = getAllPosts();

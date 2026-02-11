@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPageBySlug } from "@/lib/api"; // getPageBySlug 함수 사용
 import { getAllPages } from "@/lib/api"; // getAllPages 함수 사용
-import { BLOG_NAME } from "@/lib/constants";
+import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
@@ -87,11 +87,15 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const siteTitle = BLOG_NAME;
   const title = `${page.title} | ${siteTitle}`;
   const description = page.excerpt || page.title;
+  const baseUrl = getBaseUrl();
+  const url = `${baseUrl}/page-info/${currentParams.slug}`;
 
   return {
     title,
     description: description,
-    // ogImage 등 기타 메타데이터는 필요에 따라 추가
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
