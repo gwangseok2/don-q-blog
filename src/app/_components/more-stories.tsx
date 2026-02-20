@@ -3,15 +3,21 @@ import { PostPreview } from "./post-preview";
 
 type Props = {
   posts: Post[];
+  viewMode?: "card" | "list";
 };
 
-export function MoreStories({ posts }: Props) {
+export function MoreStories({ posts, viewMode = "list" }: Props) {
   return (
     <section>
-      <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        More Stories
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-tight">
+          More Stories
+        </h2>
+      </div>
+      <div className={`grid gap-y-12 mb-32 ${viewMode === "card"
+          ? "grid-cols-1 md:grid-cols-2 gap-x-8"
+          : "grid-cols-1"
+        }`}>
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -21,6 +27,7 @@ export function MoreStories({ posts }: Props) {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
+            viewMode={viewMode}
           />
         ))}
       </div>

@@ -8,7 +8,9 @@ img {
 
 .detail {
   word-break: break-all;
+  overflow-y: hidden;
 }
+
 .detail img {
   object-fit: cover;
 }
@@ -26,6 +28,7 @@ img {
   display: flex;
   position: relative;
 }
+
 .coupang {
   position: relative;
 }
@@ -49,25 +52,33 @@ img {
 blockquote {
   margin: 2rem 0;
   padding: 1.25rem 1.5rem;
-  border-left: 4px solid #3b82f6; /* blue-500 */
-  background: #f8fafc; /* slate-50 */
-  color: #334155; /* slate-700 */
+  border-left: 4px solid #3b82f6;
+  /* blue-500 */
+  background: #f8fafc;
+  /* slate-50 */
+  color: #334155;
+  /* slate-700 */
   font-style: italic;
   line-height: 1.75;
 }
 
 /* 자동 광고 레이아웃 깨짐 방지 */
-.google-auto-placed {
-  margin: 0 auto !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow: hidden !important; /* 튀어나오는 부분 숨김 */
-}
-
-.google-auto-placed ins.adsbygoogle {
-  /* 구글이 넣은 -32px 마진을 강제로 0으로 초기화 */
+.google-auto-placed,
+.adsbygoogle,
+ins.adsbygoogle {
   margin: 10px auto !important;
   width: 100% !important;
   max-width: 100% !important;
+  overflow: hidden !important;
+  /* 튀어나오는 부분 숨김 */
   left: 0 !important;
+  display: block !important;
+}
+
+/* 부모 컨테이너 수평 스크롤 방지 */
+body,
+main,
+article,
+.container {
+  overflow-x: hidden !important;
 }

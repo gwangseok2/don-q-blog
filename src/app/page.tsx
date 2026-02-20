@@ -1,7 +1,7 @@
 import Container from "@/app/_components/container";
 import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
+import PostListContainer from "@/app/_components/post-list-container";
 import { getAllPosts } from "@/lib/api";
 import { Metadata } from "next";
 import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
@@ -31,7 +31,7 @@ export default function Index() {
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
         />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {morePosts.length > 0 && <PostListContainer posts={morePosts} />}
       </Container>
     </main>
   );

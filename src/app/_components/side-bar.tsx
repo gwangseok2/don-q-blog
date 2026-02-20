@@ -81,8 +81,8 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
         `}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle navigation menu"
-        // 메뉴가 닫혀있고 보이지 않을 때 클릭 방지 (접근성 및 안전성)
-        // disabled={!isVisible && !isMenuOpen}
+      // 메뉴가 닫혀있고 보이지 않을 때 클릭 방지 (접근성 및 안전성)
+      // disabled={!isVisible && !isMenuOpen}
       >
         {isMenuOpen ? "X" : "☰"}
       </button>
@@ -96,17 +96,26 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
           ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
-        {/* coupang search */}
-        <div className="coupang-search-container mb-2.5">
-          <iframe
-            src="https://coupa.ng/ck1Pnq"
-            width="100%"
-            height="36"
-            frameBorder="0"
-            scrolling="no"
-            referrerPolicy="unsafe-url"
-          ></iframe>
+        <div className="mb-6">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const q = formData.get("q");
+              if (q) {
+                window.location.href = `/search?q=${encodeURIComponent(q as string)}`;
+              }
+            }}
+          >
+            <input
+              type="text"
+              name="q"
+              placeholder="검색어를 입력하세요..."
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-800 dark:border-slate-700"
+            />
+          </form>
         </div>
+
         <div className="md:mt-0 mt-0">
           {/* <h2 className="text-xl font-bold mb-4 border-b pb-2 text-gray-800">분류 전체보기 ({totalCount})</h2> */}
           <CategoryList categories={initialCategories} onLinkClick={handleLinkClick} />

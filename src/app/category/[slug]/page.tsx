@@ -1,6 +1,6 @@
 import Container from "@/app/_components/container";
 import { HeroPost } from "@/app/_components/hero-post";
-import { MoreStories } from "@/app/_components/more-stories";
+import PostListContainer from "@/app/_components/post-list-container";
 import { getPostsByCategory, getAllCategorySlugs } from "@/lib/api";
 import Header from "@/app/_components/header";
 import { Metadata } from "next";
@@ -151,7 +151,7 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
           excerpt={heroPost.excerpt}
         />
 
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {morePosts.length > 0 && <PostListContainer posts={morePosts} />}
       </Container>
     </main>
   );

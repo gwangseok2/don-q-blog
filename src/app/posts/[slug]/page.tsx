@@ -45,7 +45,7 @@ export default async function Post(props: Params) {
   // ------------------------------------------------------------------
 
   return (
-    <main>
+    <div className="w-full">
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -88,7 +88,7 @@ export default async function Post(props: Params) {
           </div>
         </article>
       </Container>
-    </main>
+    </div>
   );
 }
 
