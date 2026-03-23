@@ -15,8 +15,8 @@ export function MoreStories({ posts, viewMode = "list" }: Props) {
         </h2>
       </div>
       <div className={`grid gap-y-12 mb-32 ${viewMode === "card"
-          ? "grid-cols-1 md:grid-cols-2 gap-x-8"
-          : "grid-cols-1"
+        ? "grid-cols-1 lg:grid-cols-2 gap-x-8"
+        : "grid-cols-1"
         }`}>
         {posts.map((post) => (
           <PostPreview

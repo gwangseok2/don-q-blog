@@ -38,7 +38,7 @@ export function PostPreview({
               {title}
             </Link>
           </h3>
-          <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-1">
+          <p className="text-sm text-gray-600 mb-4 line-clamp-2 overflow-hidden flex-1">
             {excerpt}
           </p>
           <div className="mt-auto pt-4 border-t border-gray-50">
