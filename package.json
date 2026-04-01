@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "new-post": "node scripts/new-post.mjs"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
