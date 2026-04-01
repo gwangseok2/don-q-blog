@@ -71,7 +71,7 @@ ins.adsbygoogle {
   max-width: 100% !important;
   overflow: hidden !important;
   /* 튀어나오는 부분 숨김 */
-  left: 0 !important;
+  /* left: 0 !important; */
   display: block !important;
 }
 
