@@ -6,7 +6,7 @@ import ViewToggle from "./view-toggle";
 import { Post } from "@/interfaces/post";
 
 export default function PostListContainer({ posts }: { posts: Post[] }) {
-    const [viewMode, setViewMode] = useState<"card" | "list">("list");
+    const [viewMode, setViewMode] = useState<"card" | "list">("card");
 
     return (
         <div>

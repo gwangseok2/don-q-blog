@@ -21,7 +21,7 @@ export function PostPreview({
   excerpt,
   author,
   slug,
-  viewMode = "list",
+  viewMode = "card",
 }: Props) {
   if (viewMode === "card") {
     return (
@@ -33,7 +33,7 @@ export function PostPreview({
           <div className="text-xs text-gray-500 mb-2">
             <DateFormatter dateString={date} />
           </div>
-          <h3 className="text-xl font-bold mb-3 leading-tight line-clamp-2 min-h-[3.5rem]">
+          <h3 className="text-lg font-bold mb-3 leading-tight line-clamp-2">
             <Link href={`/posts/${slug}`} className="hover:underline">
               {title}
             </Link>
@@ -55,7 +55,7 @@ export function PostPreview({
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <div className="flex-1">
-        <h3 className="text-2xl md:text-3xl mb-3 leading-snug font-bold">
+        <h3 className="text-xl md:text-2xl mb-3 leading-snug font-bold">
           <Link href={`/posts/${slug}`} className="hover:underline">
             {title}
           </Link>
@@ -63,7 +63,7 @@ export function PostPreview({
         <div className="text-sm text-gray-500 mb-3">
           <DateFormatter dateString={date} />
         </div>
-        <p className="text-base md:text-lg leading-relaxed mb-4 line-clamp-2 md:line-clamp-3">
+        <p className="text-sm md:text-base leading-relaxed mb-4 line-clamp-2 md:line-clamp-3 text-gray-600 md:text-gray-900">
           {excerpt}
         </p>
         <Avatar name={author.name} picture={author.picture} />
