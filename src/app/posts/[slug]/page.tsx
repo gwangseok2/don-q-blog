@@ -48,6 +48,7 @@ export default async function Post(props: Params) {
     <div className="w-full">
       <Script
         type="application/ld+json"
+        id="schema-blog-posting"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -65,6 +66,36 @@ export default async function Post(props: Params) {
               "@type": "WebPage",
               "@id": `${baseUrl}/posts/${params.slug}`,
             },
+          }),
+        }}
+      />
+      <Script
+        type="application/ld+json"
+        id="schema-breadcrumb"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "홈",
+                item: baseUrl,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: categoryName || "정보",
+                item: `${baseUrl}/category/${post.category}`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: post.title,
+                item: `${baseUrl}/posts/${params.slug}`,
+              },
+            ],
           }),
         }}
       />
@@ -108,7 +139,10 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const siteTitle = BLOG_NAME;
   const title = `${post.title}`;
   const baseUrl = getBaseUrl();
-  const description = post.excerpt || post.title;
+  // 🚨 CTR 최적화: Description이 title과 같거나 너무 짧으면 excerpt를 우선적으로 사용하고, 최대 160자까지 풍부하게 제공
+  const description = post.excerpt && post.excerpt.length > 30
+    ? post.excerpt
+    : `${post.title} - ${BLOG_NAME}에서 제공하는 심도 있는 분석과 핵심 정보를 확인하세요.`;
   const url = `${baseUrl}/posts/${post.slug}`;
 
   return {

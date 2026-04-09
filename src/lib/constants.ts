@@ -4,7 +4,8 @@ export const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_VERCEL_URL) {
     return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
   }
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  // 🚨 Search Engine Indexing 안전장치: 환경 변수 없을 시 실제 도메인 반환
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://donqlog.com";
   return baseUrl;
 };
 
