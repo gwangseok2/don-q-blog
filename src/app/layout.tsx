@@ -63,10 +63,6 @@ const jsonLd = {
   name: BLOG_NAME,
   url: baseUrl,
   logo: `${baseUrl}${HOME_OG_IMAGE_URL.url}`,
-  sameAs: [
-    "https://www.youtube.com/@donqlog", // 예시: 실제 있으면 넣고 없어도 무방
-    "https://blog.naver.com/donqlog",
-  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "",
