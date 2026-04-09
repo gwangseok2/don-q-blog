@@ -55,6 +55,50 @@ export const metadata: Metadata = {
   },
 };
 
+const baseUrl = "https://donqlog.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: BLOG_NAME,
+  url: baseUrl,
+  logo: `${baseUrl}${HOME_OG_IMAGE_URL.url}`,
+  sameAs: [
+    "https://www.youtube.com/@donqlog", // 예시: 실제 있으면 넣고 없어도 무방
+    "https://blog.naver.com/donqlog",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "",
+    contactType: "customer service",
+  },
+};
+
+const navigationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "SiteNavigationElement",
+      position: 1,
+      name: "해외주식",
+      url: `${baseUrl}/category/market-analysis`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 2,
+      name: "부동산",
+      url: `${baseUrl}/category/home-tip`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 3,
+      name: "금융정보",
+      url: `${baseUrl}/category/stock-tip`,
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,6 +132,16 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <meta name="theme-color" content="#000" />
+        <Script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script
+          id="schema-navigation"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationJsonLd) }}
+        />
       </head>
       {/* ... */}
       <body className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400 overflow-x-hidden")}>

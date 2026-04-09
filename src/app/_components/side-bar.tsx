@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react"; // 🚨 useEffect를 추가합니다.
 import CategoryList from "@/app/_components/category-list";
 import { Category } from "@/lib/categories";
-import CoupangAdsFrame from "@/app/_components/coupang-ads-frame";
+// import CoupangAdsFrame from "@/app/_components/coupang-ads-frame";
 
 // 🚨 SidebarWrapper로부터 받을 props의 타입 정의
 interface SidebarProps {
@@ -12,7 +12,10 @@ interface SidebarProps {
   initialTotalCount: number;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount }) => {
+const Sidebar: React.FC<SidebarProps> = ({
+  initialCategories,
+  initialTotalCount,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // 🚨 스크롤 방향에 따라 버튼을 숨길지 여부를 결정하는 상태입니다.
   const [isVisible, setIsVisible] = useState(true);
@@ -68,7 +71,9 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
   }, [isMenuOpen, lastScrollY]); // isMenuOpen이 변경될 때도 useEffect 재실행
 
   // 버튼에 적용할 Tailwind CSS 클래스를 동적으로 생성
-  const buttonVisibilityClass = isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full";
+  const buttonVisibilityClass = isVisible
+    ? "opacity-100 translate-y-0"
+    : "opacity-0 -translate-y-full";
 
   return (
     <>
@@ -81,8 +86,8 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
         `}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle navigation menu"
-      // 메뉴가 닫혀있고 보이지 않을 때 클릭 방지 (접근성 및 안전성)
-      // disabled={!isVisible && !isMenuOpen}
+        // 메뉴가 닫혀있고 보이지 않을 때 클릭 방지 (접근성 및 안전성)
+        // disabled={!isVisible && !isMenuOpen}
       >
         {isMenuOpen ? "X" : "☰"}
       </button>
@@ -118,17 +123,23 @@ const Sidebar: React.FC<SidebarProps> = ({ initialCategories, initialTotalCount 
 
         <div className="md:mt-0 mt-0">
           {/* <h2 className="text-xl font-bold mb-4 border-b pb-2 text-gray-800">분류 전체보기 ({totalCount})</h2> */}
-          <CategoryList categories={initialCategories} onLinkClick={handleLinkClick} />
-          <div className="coupang-container">
+          <CategoryList
+            categories={initialCategories}
+            onLinkClick={handleLinkClick}
+          />
+          {/* <div className="coupang-container">
             <CoupangAdsFrame src={"https://coupa.ng/clbckR"} width="50%" height="240px" className="coupang-widget" />
             <CoupangAdsFrame src={"https://coupa.ng/clbcmV"} width="50%" height="240px" className="coupang-widget" />
-          </div>
+          </div> */}
         </div>
       </nav>
 
       {/* 3. 모바일 오버레이 */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black opacity-30 z-30" onClick={() => setIsMenuOpen(false)} />
+        <div
+          className="md:hidden fixed inset-0 bg-black opacity-30 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        />
       )}
     </>
   );

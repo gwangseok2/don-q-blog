@@ -9,6 +9,8 @@ import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 import Script from "next/script";
+import RelatedPosts from "@/app/_components/related-posts"; // 🚨 추가
+import { getPostsByCategory } from "@/lib/api"; // 🚨 추가
 
 // Header 컴포넌트에서 정의된 유효한 슬러그 목록 정보를 import 합니다.
 import { CATEGORY_KEYS, CategorySlug } from "@/app/_components/header";
@@ -42,6 +44,11 @@ export default async function Post(props: Params) {
 
   // categoryName: Header에 전달할 사람이 읽을 수 있는 카테고리 이름
   const categoryName = safeCategorySlug ? CATEGORY_KEYS[safeCategorySlug] : undefined;
+
+  // 🚨 연관 포스트 가져오기: 현재 카테고리와 동일한 글 중 현재 글 제외
+  const relatedPosts = getPostsByCategory(rawCategorySlug)
+    .filter((p) => p.slug !== params.slug)
+    .slice(0, 4);
   // ------------------------------------------------------------------
 
   return (
@@ -118,6 +125,7 @@ export default async function Post(props: Params) {
             />
           </div>
         </article>
+        <RelatedPosts posts={relatedPosts} />
       </Container>
     </div>
   );
