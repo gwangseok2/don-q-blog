@@ -16,6 +16,7 @@ import { getPostsByCategory } from "@/lib/api"; // 🚨 추가
 import { CATEGORY_KEYS, CategorySlug } from "@/app/_components/header";
 
 import CoupangAdsFrame from "@/app/_components/coupang-ads-frame";
+import PostInteractions from "@/app/_components/post-interactions";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -124,6 +125,7 @@ export default async function Post(props: Params) {
               className="coupang-widget"
             />
           </div>
+          <PostInteractions slug={params.slug} />
         </article>
         <RelatedPosts posts={relatedPosts} />
       </Container>
