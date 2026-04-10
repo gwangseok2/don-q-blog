@@ -1,6 +1,6 @@
 ---
-title: "AI 인프라 주문이 터졌다 | 버티브 홀딩스 3Q25 (VRT) 실적 리뷰"
-excerpt: "Vertiv 3Q25 실적 요약. AI 데이터센터 주문 폭발, 백로그 급증, 마진 개선, 가이던스 상향까지 핵심 숫자를 정리했습니다."
+title: "[실적리뷰] 버티브(VRT), AI 열풍의 최대 수혜주? 폭발적인 주문량 분석"
+excerpt: "Vertiv 3Q25 실적 요약. AI 데이터센터 열풍으로 유기적 주문이 60% 폭증하며 백로그가 13.8조 원에 도달했습니다. AI 인프라 사이클의 진짜 승자를 확인하세요."
 coverImage: "/assets/blog/vertiv-q3-2025-earnings/cover.png"
 date: "2026-01-11"
 ogImage:

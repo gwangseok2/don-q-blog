@@ -1,7 +1,7 @@
 ---
 
-title: "AI 데이터 클라우드, 드디어 ‘성장 + 효율’이 동시에 보이기 시작했다 | Snowflake 3Q FY2026 실적 리뷰"
-excerpt: "Snowflake가 AI 데이터 클라우드 기업으로 본격 전환하고 있음을 증명한 3Q FY2026 실적 리뷰. AI 매출, 수익성, 가이던스까지 모두 점검한다."
+title: "스노우플레이크(SNOW) 실적 리뷰, 데이터 클라우드에서 AI 거물로 거듭나다"
+excerpt: "Snowflake 3Q FY2026 실적 요약. AI 매출 런레이트 1억 달러 조기 달성과 역대 최고 신규 고객 유입을 통해 단순 데이터 저장공간을 넘어 AI 실행 플랫폼으로 진화하고 있습니다."
 coverImage: "/assets/blog/snowflake-q3-fy2026-earnings-review/cover.png"
 date: "2025-12-31"
 ogImage:

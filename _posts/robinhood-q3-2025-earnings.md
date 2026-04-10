@@ -1,6 +1,6 @@
 ---
-title: "[실적 리뷰] Robinhood 3Q25 (HOOD, 로빈후드)"
-excerpt: "로빈후드 3Q25 실적 리뷰. 거래 수수료 의존을 줄이고 예금·이자·카드 중심의 안정적인 수익 구조가 자리 잡기 시작했습니다."
+title: "로빈후드(HOOD) 실적 발표, 단순 증권사 넘어 금융 플랫폼으로 진화할까?"
+excerpt: "로빈후드 3Q25 실적 리뷰. 밈주식 거래 수수료 의존을 탈피하고, 예금과 카드를 아우르는 종합 금융 플랫폼으로의 드라마틱한 체질 개선에 성공했습니다."
 coverImage: "/assets/blog/robinhood-q3-2025-earnings/cover.png"
 date: "2025-12-19"
 ogImage:
