@@ -5,6 +5,7 @@ import { getPostsByCategory, getAllCategorySlugs } from "@/lib/api";
 import Header from "@/app/_components/header";
 import { Metadata } from "next";
 import { getBaseUrl } from "@/lib/constants";
+import Script from "next/script"; // 🚨 추가
 
 // 🚨 categories.json 파일을 raw 데이터로 임포트합니다.
 import rawCategories from "@/data/categories.json";
@@ -135,9 +136,35 @@ export default async function CategoryPage(props: { params: { slug: string } }) 
   // 4. 포스트가 있을 경우
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+  const baseUrl = getBaseUrl();
+  const url = `${baseUrl}/category/${rawCategorySlug}`;
 
   return (
     <main>
+      <Script
+        type="application/ld+json"
+        id="schema-category-breadcrumb"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "홈",
+                item: baseUrl,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: categoryName,
+                item: url,
+              },
+            ],
+          }),
+        }}
+      />
       <Container>
         {/* 🚨 Header에 safeCategorySlug 전달 */}
         <Header categorySlug={safeCategorySlug} />
