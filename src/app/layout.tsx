@@ -125,7 +125,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2473172921530585"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          // strategy="afterInteractive"
         />
         <meta name="theme-color" content="#000" />
         <Script
