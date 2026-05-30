@@ -105,13 +105,13 @@ export default function RootLayout({
       <head>
         {/* GA */}
         <Script
-          strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
+          // strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
           src={`https://www.googletagmanager.com/gtag/js?id=G-TH6V971WLZ`} // YOUR_GA_MEASUREMENT_ID를 본인의 ID로 변경
         />
         {/* 2. GA 초기화 및 설정 스크립트 */}
         <Script
           id="google-analytics" // 스크립트 ID
-          strategy="afterInteractive"
+          // strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
