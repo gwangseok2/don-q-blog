@@ -1,0 +1,40 @@
+# 예약 발행: 매일 00:05(KST)에 Cloudflare 재빌드를 트리거합니다.
+# date가 오늘(KST)이 된 글이 이 빌드부터 공개됩니다.
+#
+# 필요 설정
+#   Repository secret CF_DEPLOY_HOOK_URL
+#   Cloudflare 대시보드 > Workers & Pages > 프로젝트 > Settings > Builds > Deploy hooks 에서 생성한 URL
+name: Scheduled deploy
+
+on:
+  schedule:
+    - cron: "5 15 * * *" # UTC 15:05 = KST 00:05
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check posts due today (KST)
+        id: due
+        run: |
+          TODAY=$(TZ=Asia/Seoul date +%F)
+          DUE=$(grep -l "^date: \"$TODAY\"" _posts/*.md || true)
+          echo "today=$TODAY" >> "$GITHUB_OUTPUT"
+          if [ -n "$DUE" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "오늘 공개 예정 글:"; echo "$DUE"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "오늘($TODAY) 공개 예정 글이 없어 재배포를 건너뜁니다."
+          fi
+
+      - name: Trigger Cloudflare deploy hook
+        if: steps.due.outputs.run == 'true'
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "::error::CF_DEPLOY_HOOK_URL 시크릿이 없습니다."; exit 1; fi
+          curl -fsS -X POST "$HOOK"

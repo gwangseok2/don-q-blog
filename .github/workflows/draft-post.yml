@@ -1,0 +1,118 @@
+# AI 초안 생성: 주제 큐(automation/topics.md) 또는 자동 선정 주제로 초안을 만들어 PR을 올립니다.
+# PR을 검토·수정한 뒤 머지하면, 글의 date(기본: 다음 날)에 맞춰 자동 공개됩니다.
+#
+# 필요 설정
+#   1) Repository secret ANTHROPIC_API_KEY  (https://platform.claude.com 에서 발급)
+#   2) Settings > Actions > General > Workflow permissions
+#      "Read and write permissions" + "Allow GitHub Actions to create and approve pull requests" 체크
+#   선택) Repository variable DRAFT_MODEL (기본 claude-opus-5-5, 비용을 줄이려면 claude-sonnet-5-5)
+name: Draft post
+
+on:
+  schedule:
+    - cron: "0 0 * * 1,4" # 월·목 09:00 KST
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "주제 (비우면 topics.md 큐 → 자동 선정 순)"
+        required: false
+      category:
+        description: "카테고리 슬러그 (선택)"
+        required: false
+        type: choice
+        options: ["", market-analysis, stock-analysis, news-issue, stock-tip, home-tip, common-tip]
+      publish_date:
+        description: "발행일 YYYY-MM-DD (비우면 다음 날)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: draft-post
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Playwright + Korean fonts (cover image)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+          npm install --no-save --no-package-lock playwright@1.49.1 gray-matter@4.0.3 sharp@^0.34.0
+          npx playwright install --with-deps chromium
+
+      - name: Generate draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRAFT_MODEL: ${{ vars.DRAFT_MODEL }}
+          DRAFT_META_OUT: ${{ runner.temp }}/draft.json
+          IN_TOPIC: ${{ inputs.topic }}
+          IN_CATEGORY: ${{ inputs.category }}
+          IN_DATE: ${{ inputs.publish_date }}
+        run: |
+          ARGS=()
+          [ -n "$IN_TOPIC" ] && ARGS+=(--topic "$IN_TOPIC")
+          [ -n "$IN_CATEGORY" ] && ARGS+=(--category "$IN_CATEGORY")
+          [ -n "$IN_DATE" ] && ARGS+=(--date "$IN_DATE")
+          node scripts/draft-post.mjs "${ARGS[@]}"
+          # 커버 PNG → cover.webp(표시용) + cover.jpg(OG용), md 경로 자동 수정
+          node scripts/optimize-images.mjs
+
+      - name: Audit draft
+        id: meta
+        run: |
+          SLUG=$(node -p "require('${{ runner.temp }}/draft.json').slug")
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          node scripts/audit-posts.mjs --strict "_posts/$SLUG.md"
+
+      - name: Build PR body
+        run: |
+          node -e '
+            const m = require(process.argv[1]);
+            const cost = m.usage ? `입력 ${m.usage.input_tokens.toLocaleString()} / 출력 ${m.usage.output_tokens.toLocaleString()} 토큰, 검색 ${m.usage.web_search_requests}회` : "-";
+            const body = [
+              `## 📝 ${m.title}`,
+              "",
+              `| 항목 | 값 |`, `|---|---|`,
+              `| 주제 | ${m.topic} |`,
+              `| 카테고리 | \`${m.category}\` |`,
+              `| 발행 예정일 | **${m.date}** (머지 후 이 날짜 00:05 KST에 공개) |`,
+              `| 파일 | \`_posts/${m.slug}.md\` |`,
+              `| 모델 / 사용량 | ${m.model} / ${cost} |`,
+              "",
+              `> ${m.excerpt}`,
+              "",
+              "## ✅ 머지 전 체크리스트",
+              "- [ ] 수치·날짜를 아래 출처와 대조",
+              "- [ ] 필요하면 `## ✍️ 개인적인 코멘트` 추가 (AI는 개인 경험을 쓰지 않음)",
+              "- [ ] 커버 이미지 확인 (교체하려면 원본을 cover.png로 넣고 `npm run optimize-images` 실행)",
+              "- [ ] 발행일 조정이 필요하면 frontmatter `date` 수정",
+              "",
+              "## 🔍 AI 검토 메모", m.reviewNotes || "-",
+              "",
+              "## 📚 출처", m.sources || "-",
+            ].join("\n");
+            require("fs").writeFileSync(process.argv[2], body);
+          ' "${{ runner.temp }}/draft.json" "${{ runner.temp }}/pr-body.md"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: draft/${{ steps.meta.outputs.slug }}
+          commit-message: "draft: ${{ steps.meta.outputs.slug }}"
+          title: "[초안] ${{ steps.meta.outputs.slug }}"
+          body-path: ${{ runner.temp }}/pr-body.md
+          labels: ai-draft
+          add-paths: |
+            _posts/${{ steps.meta.outputs.slug }}.md
+            public/assets/blog/${{ steps.meta.outputs.slug }}/**
+            automation/topics.md
