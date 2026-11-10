@@ -1,13 +1,13 @@
 ---
 title: "서울 7억 미만 아파트 TOP 10 (관악산 휴먼시아 & 노도강 실거주 단지 & 2026년 3월)"
 excerpt: "서울에서 7억 아래로 내 집 마련, 아직 늦지 않았어! 관악구 대단지와 노도강 지역의 가성비 단지 10곳을 정리해 드립니다."
-coverImage: "/assets/blog/seoul-apartments-under-700m/cover.png"
+coverImage: "/assets/blog/seoul-apartments-under-700m/cover.webp"
 date: "2026-03-27"
 ogImage:
-  url: "/assets/blog/seoul-apartments-under-700m/cover.png"
+  url: "/assets/blog/seoul-apartments-under-700m/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 tags:

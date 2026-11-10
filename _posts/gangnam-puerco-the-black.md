@@ -1,13 +1,13 @@
 ---
 title: "[강남] 분위기 좋은 콜키지 프리 숙성 고기 맛집 '푸에르코 강남더블랙' ㅣ 강남역 맛집"
 excerpt: "강남역 근처에서 고급스러운 프라이빗 룸과 쫀득한 이베리코 꽃목살, 그리고 무제한 콜키지 프리까지 마음껏 즐길 수 있는 프리미엄 고기 맛집 푸에르코 강남더블랙 내돈내산 솔직 방문후기🤍"
-coverImage: "/assets/blog/gangnam-puerco-the-black/cover.png"
+coverImage: "/assets/blog/gangnam-puerco-the-black/cover.webp"
 date: "2026-05-31"
 ogImage:
-  url: "/assets/blog/gangnam-puerco-the-black/cover.png"
+  url: "/assets/blog/gangnam-puerco-the-black/cover.jpg"
 author:
   name: "셍이"
-  picture: "/assets/blog/authors/sangE.jpg"
+  picture: "/assets/blog/authors/sangE.webp"
 preview: false
 category: "food-review"
 ---
@@ -18,7 +18,7 @@ category: "food-review"
 그런데 이번에 제가 다녀온 이곳은 외관부터 호텔 라운지 같은 럭셔리한 인테리어,  
 그리고 무제한 프리 콜키지 혜택과 입에서 살살 녹는 숙성 이베리코 고기까지 아주 만족스러워서 얼른 소개해 드리려구요😊
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_02.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_02.webp)
 
 ---
 
@@ -33,9 +33,9 @@ category: "food-review"
 
 ## ✨푸에르코 강남더블랙만의 명품 매력 포인트✨
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_01.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_01.webp)
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_03.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_03.webp)
 
 ### 1. 호텔 라운지 입구를 연상케 하는 럭셔리한 로비
 
@@ -45,7 +45,7 @@ category: "food-review"
 입구에 들어서자마자 기분 좋은 대접을 시작하는 느낌이라 심쿵했답니다😊  
 대기하는 공간마저 아주 프라이빗하고 고급스럽게 잘 꾸며져 있어서 데이트 장소로도 제격이예요!
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_04.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_04.webp)
 
 ### 2. 정갈한 골드 식기와 아늑함 그 자체인 개별 프라이빗 룸
 
@@ -53,7 +53,7 @@ category: "food-review"
 아늑하고 차분한 단독 프라이빗 룸으로 안내를 해 주시는데,  
 정갈하게 반짝이는 <strong>골드 놋그릇 식기류</strong>와 깔끔하게 차려진 밑반찬 소스들이 셋팅되어 있었어요!  
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_08.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_08.webp)
 
 밑반찬이 요렇게 아기자기하고 정갈하게 담겨져 나오는데, 고추절임이랑 아삭한 파채무침, 백김치, 명이나물, 그리고 와사비랑 홀그레인, 수제 크림치즈 소스까지 고기랑 먹기에 아주 완벽하고 알찬 구성이예요~❤  
 환풍 시설도 정말 잘 되어 있는지 옷에 고기 냄새가 밸 걱정도 전혀 없이 쾌적하게 식사할 수 있어서 더 마음에 들었답니다!
@@ -65,16 +65,16 @@ category: "food-review"
 주문을 위해 메뉴판을 보니 부드러운 특안심, 등심 같은 최고급 한우 라인부터  
 저희의 침샘을 무한 자극하는 세계 최고 수준의 이베리코 포크(꽃목살, 갈비살, 항정살 등)까지 정말 알차게 구성되어 있더라구요!  
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_06.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_06.webp)
 
 짜잔!! 저희가 주문한 이베리코 꽃목살과 갈비살 마블링 좀 보세요!!  
 두툼한 선홍빛 고기에 칼집까지 예쁘게 나 있고, 통통한 수제 소시지랑 새송이버섯까지 함께 푸짐하게 담겨 나오는데 굽기 전부터 침샘 대폭발이었어요!!🤤  
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_09.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_09.webp)
 
 요렇게 친절하고 솜씨 좋은 직원분께서 고급진 황동 불판 위에서 이베리코 꽃목살과 갈비살, 버섯, 양파, 대파까지 맛있고 노릇노릇하게 불향을 입혀서 아주 맛깔나게 전문적으로 구워주신답니다~ 솔솔 풍기는 육향이 예술이예요~😊  
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_10.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_10.webp)
 
 다 익은 고기는 먹기 좋은 한 입 크기로 잘라서 요렇게 예쁜 블랙 플레이트에 구운 채소와 함께 정성껏 올려주셔요!!  
 한 점 콕! 집어서 수제 크림치즈 소스나 고추절임이랑 곁들여 먹어보면 겉은 쫀득~하면서 속은 촉촉하게 육즙이 팡~ 터져서 씹는 맛이 최고라구요~👏👏  
@@ -82,7 +82,7 @@ category: "food-review"
 
 ### 4. 입맛을 돋우는 신선하고 고소한 명품 한우 육회
 
-![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_07.jpg)
+![이미지 설명](/assets/blog/gangnam-puerco-the-black/KakaoTalk_20260531_234567890_07.webp)
 
 고기를 먹는 중간에 입가심 겸 사이드로 주문한 <strong>한우 육회</strong>도 정말 대박이었어요!!  
 보기만 해도 신선함이 느껴지는 선홍빛 비주얼의 육회에 고소한 통깨가 솔솔 뿌려져 있고,  

@@ -1,13 +1,13 @@
 ---
 title: "로빈후드(HOOD) 실적 발표, 단순 증권사 넘어 금융 플랫폼으로 진화할까?"
 excerpt: "로빈후드 3Q25 실적 리뷰. 밈주식 거래 수수료 의존을 탈피하고, 예금과 카드를 아우르는 종합 금융 플랫폼으로의 드라마틱한 체질 개선에 성공했습니다."
-coverImage: "/assets/blog/robinhood-q3-2025-earnings/cover.png"
+coverImage: "/assets/blog/robinhood-q3-2025-earnings/cover.webp"
 date: "2025-12-19"
 ogImage:
-  url: "/assets/blog/robinhood-q3-2025-earnings/cover.png"
+  url: "/assets/blog/robinhood-q3-2025-earnings/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-analysis"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "2026 코스트코 회원권 완벽 가이드: 이그제큐티브 2% 적립과 본전 보장 제도"
 excerpt: "코스트코 연회비 인상 후 어떤 회원권이 나에게 유리할까요? 골드스타, 비즈니스, 이그제큐티브 회원권의 혜택 차이와 리워드 환급 꿀팁을 정리해 드립니다."
-coverImage: "/assets/blog/costco-membership-guide-2026-comparison/cover.png"
+coverImage: "/assets/blog/costco-membership-guide-2026-comparison/cover.webp"
 date: "2026-03-19"
 ogImage:
-  url: "/assets/blog/costco-membership-guide-2026-comparison/cover.png"
+  url: "/assets/blog/costco-membership-guide-2026-comparison/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---

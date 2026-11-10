@@ -1,13 +1,13 @@
 ---
 title: "[솔직후기] 96kg 대식가 남성의 마운자로 한달 후기, 기적은 없었다? (비용/부작용)"
 excerpt: "다이어트 끝판왕이라 불리는 마운자로, 96kg 남성이 한 달간 직접 맞아봤습니다. 32만원의 가치가 있었을까요? 운동과 식단을 병행하며 느낀 몸의 변화와 의외의 결과를 공개합니다."
-coverImage: "/assets/blog/mounjaro-review/cover.png"
+coverImage: "/assets/blog/mounjaro-review/cover.webp"
 date: "2026-04-10"
 ogImage:
-  url: "/assets/blog/mounjaro-review/cover.png"
+  url: "/assets/blog/mounjaro-review/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---
@@ -26,11 +26,11 @@ category: "common-tip"
 
 진료 전, 현재 몸 상태를 정확히 파악하기 위해 인바디 측정을 먼저 진행했습니다.
 
-![병원에서 인바디를 측정하고 있는 모습](/assets/blog/mounjaro-review/inbody.jpg)
+![병원에서 인바디를 측정하고 있는 모습](/assets/blog/mounjaro-review/inbody.webp)
 
 용량은 가장 입문 단계인 <strong>2.5mg</strong>을 채택했습니다. 몸에 가해지는 부담을 최소화하면서 반응을 보기 위해서였죠.
 
-![마운자로 2.5mg 실제 제품 사진](/assets/blog/mounjaro-review/pen.jpg)
+![마운자로 2.5mg 실제 제품 사진](/assets/blog/mounjaro-review/pen.webp)
 
 ---
 

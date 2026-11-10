@@ -1,13 +1,13 @@
 ---
 title: "1세대 1주택 비과세 조건 (2025년 기준): 조정지역 vs 비조정지역 완벽 정리"
 excerpt: "2025년 10월 정부 규제지역 확대 이후, 1주택 비과세 요건이 조정대상지역 여부에 따라 어떻게 달라지는지 2년 거주 요건을 중심으로 정리합니다."
-coverImage: "/assets/blog/one-house-tax-exemption-2025/cover.png"
+coverImage: "/assets/blog/one-house-tax-exemption-2025/cover.webp"
 date: "2025-12-11"
 ogImage:
-  url: "/assets/blog/one-house-tax-exemption-2025/cover.png"
+  url: "/assets/blog/one-house-tax-exemption-2025/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 ---
@@ -33,7 +33,7 @@ category: "home-tip"
 
 정부 발표에 따라 새롭게 지정된 조정대상지역 및 투기과열지구 현황입니다.
 
-> **![조정대상지역현황](/assets/blog/one-house-tax-exemption-2025/cover.png)**
+> **![조정대상지역현황](/assets/blog/one-house-tax-exemption-2025/cover.webp)**
 
 ### 서울
 

@@ -1,13 +1,13 @@
 ---
 title: "스페이스X IPO 임박? 2026년 하반기 상장설과 기업가치 8,000억 달러 분석"
 excerpt: "일론 머스크의 스페이스X가 2026년 하반기 IPO를 추진한다는 소식이 나왔다. 왜 지금 상장인지, 기업가치 8,000억 달러가 가능한 이유와 시장에 미칠 영향을 정리한다."
-coverImage: "/assets/blog/spacex-ipo-2026/cover.png"
+coverImage: "/assets/blog/spacex-ipo-2026/cover.webp"
 date: "2025-12-14"
 ogImage:
-  url: "/assets/blog/spacex-ipo-2026/cover.png"
+  url: "/assets/blog/spacex-ipo-2026/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "news-issue"
 ---

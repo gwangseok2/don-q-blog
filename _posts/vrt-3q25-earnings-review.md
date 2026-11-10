@@ -1,13 +1,13 @@
 ---
 title: "[실적리뷰] 버티브(VRT), AI 열풍의 최대 수혜주? 폭발적인 주문량 분석"
 excerpt: "Vertiv 3Q25 실적 요약. AI 데이터센터 열풍으로 유기적 주문이 60% 폭증하며 백로그가 13.8조 원에 도달했습니다. AI 인프라 사이클의 진짜 승자를 확인하세요."
-coverImage: "/assets/blog/vertiv-q3-2025-earnings/cover.png"
+coverImage: "/assets/blog/vertiv-q3-2025-earnings/cover.webp"
 date: "2026-01-11"
 ogImage:
-  url: "/assets/blog/vertiv-q3-2025-earnings/cover.png"
+  url: "/assets/blog/vertiv-q3-2025-earnings/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-analysis"
 ---

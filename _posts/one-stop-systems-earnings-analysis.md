@@ -1,13 +1,13 @@
 ---
 title: "[종목분석] 에지 AI의 숨은 보석, 원 스탑 시스템즈(OSS) 2025 실적 발표와 턴어라운드의 신호탄"
 excerpt: "가혹한 환경에서 가동하는 에지 AI 하드웨어 강자 원 스탑 시스템즈(OSS)의 2025년 10-K 분석. 올초부터 투자하여 수익률 40%를 돌파한 돈큐의 투자 코멘트까지 아낌없이 공개합니다."
-coverImage: "/assets/blog/one-stop-systems-earnings-analysis/cover.png"
+coverImage: "/assets/blog/one-stop-systems-earnings-analysis/cover.webp"
 date: "2026-06-01"
 ogImage:
-  url: "/assets/blog/one-stop-systems-earnings-analysis/cover.png"
+  url: "/assets/blog/one-stop-systems-earnings-analysis/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-analysis"
 ---
@@ -88,7 +88,7 @@ OSS는 엔비디아 파트너 프로그램(NPN) 내에서 <strong>'Elite Tier 2 
 
 그 결과 현재까지 꽤나 만족스러운 수익을 올리고 있는데요. 제 실제 투자 계좌를 살짝 보여드립니다.
 
-![돈큐의 원 스탑 시스템즈(OSS) 투자 수익률 인증](/assets/blog/one-stop-systems-earnings-analysis/portfolio.png)
+![돈큐의 원 스탑 시스템즈(OSS) 투자 수익률 인증](/assets/blog/one-stop-systems-earnings-analysis/portfolio.webp)
 
 올해 초부터 모아가기 시작하여 현재 1주 평균 단가 19,276원에 750주를 보유 중이며, 현재 수익률은 <strong>+41.8%(약 600만 원 수익)</strong>를 달성하고 있습니다. 
 

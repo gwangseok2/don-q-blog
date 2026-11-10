@@ -27,10 +27,10 @@
 ---
 title: "글 제목 (핵심 키워드 + 후킹 문구 조합)"
 excerpt: "검색 결과(SERP)에서 클릭을 부르는 160자 이내의 핵심 요약문. '비밀', '한정', 'TOP 10', '지금 바로' 등 파워 워드 적극 활용."
-coverImage: "/assets/blog/[slug]/cover.png"
+coverImage: "/assets/blog/[slug]/cover.webp"
 date: "YYYY-MM-DD"
 ogImage:
-  url: "/assets/blog/[slug]/cover.png"
+  url: "/assets/blog/[slug]/cover.jpg"
 author:
   name: "돈큐"
   picture: "/assets/blog/authors/donq.png"
@@ -74,8 +74,11 @@ category: "카테고리-슬러그"
     - 섹션 사이에는 `---` (구분선)을 넣어 흐름을 끊어줍니다.
     - 리스트 사용 시 `-` 또는 `1.`을 활용하며, 핵심 요약에는 `✔` 이모지를 사용하기도 합니다.
 3. **이미지 삽입 및 압축**:
-    - 모든 게시글에는 최소한 `cover.png`가 필요하며, `/assets/blog/[slug]/` 경로에 위치해야 합니다.
-    - 문맥상 필요한 경우 본문에 이미지를 추가합니다: `![설명](/assets/blog/[slug]/image.png)`
+    - 모든 게시글에는 커버 이미지가 필요하며, `/assets/blog/[slug]/` 경로에 위치해야 합니다.
+    - 문맥상 필요한 경우 본문에 이미지를 추가합니다: `![설명](/assets/blog/[slug]/image.webp)`
+    - > [!IMPORTANT]
+    - > **WebP 사용**: 원본(png/jpg)을 넣고 글을 쓴 뒤 `npm run optimize-images`를 실행하면 자동으로 WebP 변환 + 리사이징 + 마크다운 경로 수정이 됩니다.
+    - > 커버는 `cover.webp`(페이지 표시용)와 `cover.jpg`(카톡·SNS 링크 미리보기용, `ogImage.url`) 두 개가 만들어집니다.
     - > [!IMPORTANT]
     - > **이미지 압축 필수 및 1MB 제한**: 블로그 로딩 성능 최적화를 위해 본문 및 커버에 사용하는 모든 이미지는 **반드시 압축 과정을 거쳐야 합니다.** 또한 **개별 이미지의 파일 크기는 절대 1MB를 초과할 수 없습니다.** 모바일 촬영 등의 고해상도 이미지는 사전에 해상도 리사이징(가로 너비 최대 1600px 권장) 및 용량 최적화 처리를 거쳐야 합니다.
 4. **결론 및 마무리**:
@@ -124,6 +127,6 @@ AI를 활용하면 `rule.md` 규칙을 완벽히 지키면서 글을 완성할 �
 1. **강조 태그 검수**: 본문에 `**`가 하나라도 포함되어 있는가? 있다면 즉시 `<strong>` 태그로 교체했는가? (가장 많이 하는 실수!)
 2. **파일명 최적화**: 날짜 접두어를 제거하고 핵심 키워드 중심의 영어 슬러그로 파일명을 결정했는가?
 3. **카테고리 매칭**: 제공된 카테고리 슬러그 목록(4.2절)에 있는 정확한 키워드를 사용했는가?
-4. **이미지 경로**: `/assets/blog/[slug]/cover.png` 형식을 정확히 따랐는가?
+4. **이미지 경로**: `coverImage`는 `/assets/blog/[slug]/cover.webp`, `ogImage.url`은 `/assets/blog/[slug]/cover.jpg` 형식을 따랐는가?
 5. **말투(Tone)**: '돈큐'의 1인칭 시점이며, 친근함과 전문성이 조화로운가?
 6. **이미지 압축 및 용량 한도 검수**: 삽입된 모든 이미지 파일의 용량이 **반드시 압축되었으며, 개별 이미지 용량이 1MB 이하로 제한**되었는지 확인하였는가? (절대 1MB를 넘지 않아야 함)

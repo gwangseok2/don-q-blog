@@ -1,13 +1,13 @@
 ---
 title: "미국이 AI를 국가가 직접 관리하겠다고 선언했다｜‘제네시스 미션’ 쉽게 풀어보기"
 excerpt: "2025년 미국 대통령 행정명령으로 시작된 ‘제네시스 미션’. 왜 미국은 AI를 민간이 아닌 국가가 직접 통합 관리하려는 걸까? AI 맨해튼 프로젝트를 처음 듣는 사람도 이해할 수 있게 풀어봅니다."
-coverImage: "/assets/blog/us-ai-genesis-mission/cover.png"
+coverImage: "/assets/blog/us-ai-genesis-mission/cover.webp"
 date: "2025-12-30"
 ogImage:
-  url: "/assets/blog/us-ai-genesis-mission/cover.png"
+  url: "/assets/blog/us-ai-genesis-mission/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-tip"
 ---------------------------

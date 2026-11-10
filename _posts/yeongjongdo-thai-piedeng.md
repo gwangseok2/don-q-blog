@@ -1,13 +1,13 @@
 ---
 title: "[영종도] 이국적인 분위기가 가득한 태국 맛집 '파이뎅' ㅣ 운서역 맛집"
 excerpt: "영종도 운서동에서 찾은 이국적인 초록 감성의 태국 음식점 파이뎅! 국물이 진한 직화 육식 쌀국수와 매콤 짭조름한 팟카파오무쌉 내돈내산 솔직 방문후기🤍"
-coverImage: "/assets/blog/yeongjongdo-thai-piedeng/cover.png"
+coverImage: "/assets/blog/yeongjongdo-thai-piedeng/cover.webp"
 date: "2026-04-28"
 ogImage:
-  url: "/assets/blog/yeongjongdo-thai-piedeng/cover.png"
+  url: "/assets/blog/yeongjongdo-thai-piedeng/cover.jpg"
 author:
   name: "셍이"
-  picture: "/assets/blog/authors/sangE.jpg"
+  picture: "/assets/blog/authors/sangE.webp"
 preview: false
 category: "food-review"
 ---
@@ -18,7 +18,7 @@ category: "food-review"
 그런데 이번에 제가 다녀온 이곳은 외관부터 초록초록한 내부 분위기,  
 그리고 기가 막히는 맛까지 아주 취향 저격이라 얼른 소개해 드리고 싶었어요😊
 
-![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_01.jpg)
+![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_01.webp)
 
 ---
 
@@ -33,7 +33,7 @@ category: "food-review"
 
 ## ✨파이뎅만의 감성 넘치는 매력 포인트✨
 
-![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_02.jpg)
+![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_02.webp)
 
 ### 1. 동남아 리조트에 온 듯한 싱그러운 초록 인테리어
 
@@ -43,7 +43,7 @@ category: "food-review"
 테이블 간격도 넓어서 도란도란 맛있는 태국 음식 먹으며 수다 떨기에도 좋고,  
 곳곳이 <strong>인스타 감성 가득한 포토존</strong>이라 사진 찍는 재미도 아주 쏠쏠하답니다📸
 
-![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_03.jpg)
+![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_03.webp)
 
 ### 2. 신선한 고수와 소스를 마음껏 즐기는 알찬 셀프 바
 
@@ -52,7 +52,7 @@ category: "food-review"
 눈치 볼 필요 없이 마음껏 취향에 맞춰 가져다 먹을 수 있어서 참 마음에 들더라구요!  
 특히 고수 좋아하시는 분들이라면 쌀국수에 고수를 듬뿍~ 얹어 먹을 수 있어서 대만족하실 것 같아요😊
 
-![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_04.jpg)
+![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_04.webp)
 
 ### 3. 하루 7그릇 한정! 압도적인 비주얼의 직화 육식 쌀국수
 
@@ -64,7 +64,7 @@ category: "food-review"
 한 입 먹는 순간 속이 확~ 풀리는 얼큰하면서도 깊은 국물맛에 중독되어서  
 숟가락을 놓을 수가 없었어요.. 진짜 너무너무 맛있어요..!!👏👏
 
-![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_05.jpg)
+![이미지 설명](/assets/blog/yeongjongdo-thai-piedeng/KakaoTalk_20260531_123456789_05.webp)
 
 ### 4. 매콤 짭조름한 밥도둑 최강자, 팟카파오무쌉
 

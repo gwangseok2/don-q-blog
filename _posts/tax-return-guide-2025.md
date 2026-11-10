@@ -1,13 +1,13 @@
 ---
 title: "[TIP] 연말 정산 절세 방법 및 노하우 (2025 최신)"
 excerpt: "연말정산 미리보기부터 맞벌이 부부 전략, 2025년 변경사항까지, 환급액을 극적으로 늘리는 실전 팁을 정리했습니다."
-coverImage: "/assets/blog/tax-return-guide-2025/cover.jpg"
+coverImage: "/assets/blog/tax-return-guide-2025/cover.webp"
 date: "2025-12-13"
 ogImage:
   url: "/assets/blog/tax-return-guide-2025/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---

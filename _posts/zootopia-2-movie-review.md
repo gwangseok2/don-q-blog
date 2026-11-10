@@ -1,13 +1,13 @@
 ---
 title: "[리뷰] 주토피아 2 후기: 10년을 기다린 보람이 있는 완벽한 속편"
 excerpt: "주토피아 2는 10년의 기다림이 아깝지 않은 디즈니 최고의 속편이다. 확장된 세계관과 깊어진 메시지, 주디와 닉의 성숙한 관계까지 짚어본 솔직 리뷰."
-coverImage: "/assets/blog/zootopia-2-movie-review/cover.png"
+coverImage: "/assets/blog/zootopia-2-movie-review/cover.webp"
 date: "2025-12-26"
 ogImage:
-  url: "/assets/blog/zootopia-2-movie-review/cover.png"
+  url: "/assets/blog/zootopia-2-movie-review/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "daily"
 ---

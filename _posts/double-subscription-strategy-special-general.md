@@ -1,13 +1,13 @@
 ---
 title: "당첨 확률 2배! 특공·일반 중복 청약 가능한 경우 vs 절대 안 되는 경우"
 excerpt: "청약 당첨 확률을 높이는 가장 강력한 방법, 특별공급과 일반공급의 중복 청약! 부적격 걱정 없이 안전하게 당첨 확률을 2배로 높이는 실전 전략을 공개합니다."
-coverImage: "/assets/blog/double-subscription-strategy-special-general/cover.png"
+coverImage: "/assets/blog/double-subscription-strategy-special-general/cover.webp"
 date: "2026-04-10"
 ogImage:
-  url: "/assets/blog/double-subscription-strategy-special-general/cover.png"
+  url: "/assets/blog/double-subscription-strategy-special-general/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 ---

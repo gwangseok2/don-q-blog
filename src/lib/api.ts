@@ -75,10 +75,26 @@ export function getPostBySlug(slug: string) {
   return { ...data, slug: realSlug, content } as Post;
 }
 
+// ------------------------------------------------------------------
+// 예약 발행: date가 오늘(KST)보다 미래인 글은 빌드에서 제외
+// 매일 자정 이후 재배포(.github/workflows/scheduled-deploy.yml)되면 자동 공개됩니다.
+// 로컬에서 예약 글까지 보고 싶으면 SHOW_FUTURE_POSTS=true npm run dev
+// ------------------------------------------------------------------
+function getTodayKST(): string {
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+export function isPublished(date: unknown): boolean {
+  if (process.env.SHOW_FUTURE_POSTS === "true") return true;
+  if (typeof date !== "string" || !date) return true;
+  return date.slice(0, 10) <= getTodayKST();
+}
+
 export function getAllPosts(): Post[] {
-  const slugs = getPostSlugs();
+  const slugs = getPostSlugs().filter((slug) => slug.endsWith(".md"));
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
+    .filter((post) => isPublished(post.date))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
@@ -122,17 +138,16 @@ interface PostCategory {
 }
 
 export function getAllPostCategories(): PostCategory[] {
-  const slugs = getPostSlugs();
+  const slugs = getPostSlugs().filter((slug) => slug.endsWith(".md"));
 
-  return slugs.map((slug) => {
-    const fullPath = join(postsDirectory, slug);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
-
-    const categorySlug = data.category || "uncategorized";
-
-    return { category: categorySlug };
-  });
+  return slugs
+    .map((slug) => {
+      const fullPath = join(postsDirectory, slug);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      return matter(fileContents).data;
+    })
+    .filter((data) => isPublished(data.date))
+    .map((data) => ({ category: data.category || "uncategorized" }));
 }
 
 // ------------------------------------------------------------------

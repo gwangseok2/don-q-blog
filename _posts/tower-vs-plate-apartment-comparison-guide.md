@@ -1,13 +1,13 @@
 ---
 title: "판상형 vs 타워형 아파트 완벽 비교 가이드: 나에게 맞는 구조는?"
 excerpt: "판상형 아파트와 타워형 아파트의 구조적 차이, 장단점, 실거주 만족도와 환금성까지 한 번에 정리한 비교 가이드입니다."
-coverImage: "/assets/blog/tower-vs-plate-apartment-comparison/cover.png"
+coverImage: "/assets/blog/tower-vs-plate-apartment-comparison/cover.webp"
 date: "2025-12-23"
 ogImage:
-  url: "/assets/blog/tower-vs-plate-apartment-comparison/cover.png"
+  url: "/assets/blog/tower-vs-plate-apartment-comparison/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 ---

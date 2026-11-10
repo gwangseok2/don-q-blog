@@ -1,13 +1,13 @@
 ---
 title: "주택 담보 대출 완벽 정리: 디딤돌 · 보금자리론 · 신생아 특례 (LTV 70% 제한 반영, 2026년 ver)"
 excerpt: "2026년 서울 및 수도권 내 집 마련을 위한 필수 대출 3종(디딤돌, 보금자리론, 신생아 특례)을 비교하고, 최근 변경된 LTV 70% 규정을 상세히 분석합니다."
-coverImage: "/assets/blog/mortgage-loan-guide-ltv-70/cover.png"
+coverImage: "/assets/blog/mortgage-loan-guide-ltv-70/cover.webp"
 date: "2026-04-07"
 ogImage:
-  url: "/assets/blog/mortgage-loan-guide-ltv-70/cover.png"
+  url: "/assets/blog/mortgage-loan-guide-ltv-70/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 ---

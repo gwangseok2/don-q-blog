@@ -2,13 +2,13 @@
 
 title: "스노우플레이크(SNOW) 실적 리뷰, 데이터 클라우드에서 AI 거물로 거듭나다"
 excerpt: "Snowflake 3Q FY2026 실적 요약. AI 매출 런레이트 1억 달러 조기 달성과 역대 최고 신규 고객 유입을 통해 단순 데이터 저장공간을 넘어 AI 실행 플랫폼으로 진화하고 있습니다."
-coverImage: "/assets/blog/snowflake-q3-fy2026-earnings-review/cover.png"
+coverImage: "/assets/blog/snowflake-q3-fy2026-earnings-review/cover.webp"
 date: "2025-12-31"
 ogImage:
-  url: "/assets/blog/snowflake-q3-fy2026-earnings-review/cover.png"
+  url: "/assets/blog/snowflake-q3-fy2026-earnings-review/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-analysis"
 -------------------------------------------------

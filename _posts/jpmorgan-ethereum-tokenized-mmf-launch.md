@@ -1,13 +1,13 @@
 ---
 title: "JP모건도 결국 블록체인으로 왔다, 이더리움 기반 토큰화 MMF ‘MONY’ 출시"
 excerpt: "JP모건이 이더리움 블록체인을 활용한 토큰화 머니마켓펀드(MMF) ‘MONY’를 출시했습니다. 블랙록에 이어 월가 대형 금융사들이 왜 토큰화에 뛰어드는지, 투자자 입장에서 쉽게 정리해봅니다."
-coverImage: "/assets/blog/jpmorgan-ethereum-tokenized-mmf-launch/cover.png"
+coverImage: "/assets/blog/jpmorgan-ethereum-tokenized-mmf-launch/cover.webp"
 date: "2025-12-16"
 ogImage:
-  url: "/assets/blog/jpmorgan-ethereum-tokenized-mmf-launch/cover.png"
+  url: "/assets/blog/jpmorgan-ethereum-tokenized-mmf-launch/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "news-issue"
 categoryName: "해외주식"

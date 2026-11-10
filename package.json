@@ -4,7 +4,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "new-post": "node scripts/new-post.mjs"
+    "new-post": "node scripts/new-post.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "draft": "node scripts/draft-post.mjs",
+    "cover": "node scripts/make-cover.mjs",
+    "audit": "node scripts/audit-posts.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.0",
