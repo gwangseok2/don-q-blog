@@ -1,0 +1,27 @@
+# 글을 추가·수정하는 PR마다 rule.md 규칙을 검사합니다.
+# (** 사용, 카테고리 오타, 커버 경로, 이미지 1MB 초과 등)
+name: Post check
+
+on:
+  pull_request:
+    paths:
+      - "_posts/**"
+      - "public/assets/blog/**"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --no-package-lock gray-matter@4.0.3
+      - name: Audit changed posts
+        run: |
+          FILES=$(git diff --name-only --diff-filter=AM "origin/${{ github.base_ref }}...HEAD" -- '_posts/*.md')
+          if [ -z "$FILES" ]; then echo "변경된 글 없음"; exit 0; fi
+          echo "$FILES"
+          node scripts/audit-posts.mjs --strict $FILES
