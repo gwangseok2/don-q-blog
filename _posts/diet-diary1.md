@@ -1,13 +1,13 @@
 ---
 title: "다이어트 기록 1 | 회사 내기로 시작한 진짜 다이어트"
 excerpt: "회사 동료 4명이서 시작한 다이어트 내기. 2026년 2월 9일까지 인바디 측정으로 순위를 가리는 현실 다이어트 기록의 시작. 체중, 식단, 운동, 솔직한 일상을 그대로 남깁니다."
-coverImage: "/assets/blog/diet/cover.png"
+coverImage: "/assets/blog/diet/cover.webp"
 date: "2026-01-08"
 ogImage:
-  url: "/assets/blog/diet/cover.png"
+  url: "/assets/blog/diet/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "daily"
 -----------------

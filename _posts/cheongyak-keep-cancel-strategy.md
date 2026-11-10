@@ -1,13 +1,13 @@
 ---
 title: "청약통장 해지할까 말까? 납입금·유지 전략 한 번에 정리"
 excerpt: "분양가와 대출 규제 속에서 청약통장을 해지해야 할지 고민하는 분들을 위한 현실적인 유지 이유, 해지 고려 조건, 그리고 민영주택 납입 상한선 전략을 한 번에 정리합니다."
-coverImage: "/assets/blog/cheongyak-keep-cancel-strategy/cover.png"
+coverImage: "/assets/blog/cheongyak-keep-cancel-strategy/cover.webp"
 date: "2025-12-15"
 ogImage:
-  url: "/assets/blog/cheongyak-keep-cancel-strategy/cover.png"
+  url: "/assets/blog/cheongyak-keep-cancel-strategy/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "home-tip"
 ---

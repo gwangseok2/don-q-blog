@@ -1,13 +1,13 @@
 ---
 title: "2026년부터 확 달라지는 세금 제도 총정리! (양도소득세, 부동산, 연말정산, 기업 혜택까지)"
 excerpt: "정부의 세법 개정안을 바탕으로 2026년부터 적용되는 주요 세금 변화를 정리합니다. 부동산 양도세, 청년 비과세 적금, 연말정산 혜택 등 꼭 알아야 할 핵심 정보를 확인하세요."
-coverImage: "/assets/blog/2026-tax-reforms-guide/cover.png"
+coverImage: "/assets/blog/2026-tax-reforms-guide/cover.webp"
 date: "2025-12-18"
 ogImage:
-  url: "/assets/blog/2026-tax-reforms-guide/cover.png"
+  url: "/assets/blog/2026-tax-reforms-guide/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---

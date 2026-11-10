@@ -48,20 +48,20 @@ function audit() {
     const expectedSlug = slug.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/^\d{4}-/, '');
     
     if (data.coverImage) {
-      const coverImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.png$`);
-      const optimizedCoverImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.png$`);
+      const coverImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.(png|jpe?g|webp)$`);
+      const optimizedCoverImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.(png|jpe?g|webp)$`);
       if (!coverImageRegex.test(data.coverImage) && !optimizedCoverImageRegex.test(data.coverImage)) {
-        issues.push(`coverImage path "${data.coverImage}" does not match "/assets/blog/[slug]/cover.png"`);
+        issues.push(`coverImage path "${data.coverImage}" does not match "/assets/blog/[slug]/cover.(png|jpg|webp)"`);
       }
     } else {
       issues.push(`Missing coverImage in frontmatter`);
     }
 
     if (data.ogImage && data.ogImage.url) {
-      const ogImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.png$`);
-      const optimizedOgImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.png$`);
+      const ogImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.(png|jpe?g|webp)$`);
+      const optimizedOgImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.(png|jpe?g|webp)$`);
       if (!ogImageRegex.test(data.ogImage.url) && !optimizedOgImageRegex.test(data.ogImage.url)) {
-        issues.push(`ogImage.url path "${data.ogImage.url}" does not match "/assets/blog/[slug]/cover.png"`);
+        issues.push(`ogImage.url path "${data.ogImage.url}" does not match "/assets/blog/[slug]/cover.(png|jpg|webp)"`);
       }
     } else {
       issues.push(`Missing ogImage.url in frontmatter`);

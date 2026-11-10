@@ -1,13 +1,13 @@
 ---
 title: "[영등포] 얼큰함이 남다른 '정솔닭한마리' ㅣ 영등포역 맛집"
 excerpt: "블루리본 받은 영등포역 닭한마리 맛집 ㅣ 정솔닭한마리 솔직 방문후기🤍"
-coverImage: "/assets/blog/yeongdeungpo-review1/cover.png"
+coverImage: "/assets/blog/yeongdeungpo-review1/cover.webp"
 date: "2026-04-16"
 ogImage:
-  url: "/assets/blog/yeongdeungpo-review1/cover.png"
+  url: "/assets/blog/yeongdeungpo-review1/cover.jpg"
 author:
   name: "셍이"
-  picture: "/assets/blog/authors/sangE.jpg"
+  picture: "/assets/blog/authors/sangE.webp"
 preview: false
 category: "food-review"
 ---
@@ -17,7 +17,7 @@ category: "food-review"
 깔끔한 맛을 떠올리게 되지않나요?  
 하지만 정솔닭한마리는 완전히 다른 느낌의 닭한마리 맛집이예요!
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_17.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_17.webp)
 
 ---
 
@@ -31,9 +31,9 @@ category: "food-review"
 
 ## ✨정솔닭한마리만의 특별한 포인트✨
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_09.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_09.webp)
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_16.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_16.webp)
 
 ### 1. 맑은 국물과는 차원이 다른 '얼근함+시원함'
 
@@ -44,7 +44,7 @@ category: "food-review"
 자극적으로 맵기만 한 게 아니라,  
 뒷맛이 아주 깔끔하고 시원해서 계속 국물을 떠먹게 되는 중독성이 있어서 더 좋아요~
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_13.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_13.webp)
 
 ### 2. 입맛 돋우는 매콤 부추 소스
 
@@ -53,7 +53,7 @@ category: "food-review"
 잘 익은 닭고기를 이 부추 소스에 푹 찍어 먹으면  
 알싸~한 맛이 부드러운 닭고기와 환상적인 궁합을 자랑해요👏👏
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_12.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_12.webp)
 
 ### 3. 떡사리와 칼국수사리 추가는 필수중의 필수!!
 
@@ -63,7 +63,7 @@ category: "food-review"
 국물이 진해지면서 걸쭉해지는데 왜 처음부터 같이 끓이는지 알 것 같더라구요~  
 진짜 너무너무 맛있어요..!!
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_19.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_19.webp)
 
 ### 4. 마무리로는 날치알 볶음밥
 
@@ -71,7 +71,7 @@ category: "food-review"
 정솔닭한마리를 완벽하게 먹었다고 할 수 있어요!!  
 아무리 배가 불러도 다 먹게 되는 마성의 K-디저트거든요~😊
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_22.jpg)
+![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_22.webp)
 
 ---
 

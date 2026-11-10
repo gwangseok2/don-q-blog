@@ -1,13 +1,13 @@
 ---
 title: "2025-12-27 브라운아이드소울 콘서트 후기｜나얼 라이브, 고척 스카이돔"
 excerpt: "고척 스카이돔에서 열린 브라운아이드소울 콘서트 후기. 나얼의 라이브를 처음 직관하며 느낀 전율과 아쉬움까지 솔직하게 정리했다."
-coverImage: "/assets/blog/2025-brown-eyed-soul-concert-review/cover.png"
+coverImage: "/assets/blog/2025-brown-eyed-soul-concert-review/cover.webp"
 date: "2025-12-29"
 ogImage:
-  url: "/assets/blog/2025-brown-eyed-soul-concert-review/cover.png"
+  url: "/assets/blog/2025-brown-eyed-soul-concert-review/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "daily"
 ---
@@ -16,7 +16,7 @@ category: "daily"
 
 오늘은 **친구 덕분에 공짜로 다녀온 브라운아이드소울 콘서트 후기**를 남겨보려고 합니다. 사실 기대 반, 호기심 반으로 갔던 공연이었는데, 결과부터 말하자면 꽤 강렬한 경험이었습니다.
 
-## ![고척스카이돔포스터](/assets/blog/2025-brown-eyed-soul-concert-review/img_0.png)
+## ![고척스카이돔포스터](/assets/blog/2025-brown-eyed-soul-concert-review/img_0.webp)
 
 ## 🎤 처음 마주한 ‘탑티어’ 라이브의 충격
 
@@ -36,7 +36,7 @@ category: "daily"
 중간중간 멤버들의 토크가 적절하게 섞였고, 관객들이 함께 따라 부를 수 있도록 유도하는 구간도 많았습니다.  
 덕분에 발라드 위주의 공연임에도 **지루하다는 느낌은 거의 들지 않았습니다.**
 
-## ![LED팔찌](/assets/blog/2025-brown-eyed-soul-concert-review/img_1.png)
+## ![LED팔찌](/assets/blog/2025-brown-eyed-soul-concert-review/img_1.webp)
 
 각 객석마다 나눠준 **LED 팔찌**도 은근히 재미 요소였습니다.  
 공연 내내 음악에 맞춰 색이 바뀌는데, 고척돔 전체가 하나의 무대처럼 보이는 순간들이 꽤 인상 깊었습니다.

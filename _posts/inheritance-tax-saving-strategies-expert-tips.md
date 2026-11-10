@@ -1,13 +1,13 @@
 ---
 title: "고액 자산가들만 아는 '증여세 절세 8가지 전략' 초보자 가이드"
 excerpt: "증여세는 미리 설계하면 합법적으로 상당 부분을 아낄 수 있습니다. 10년 주기 리셋, 수익 자산 증여 등 고액 자산가들이 실제로 활용하는 8가지 핵심 절세 전략을 소개합니다."
-coverImage: "/assets/blog/inheritance-tax-saving-strategies-expert-tips/cover.png"
+coverImage: "/assets/blog/inheritance-tax-saving-strategies-expert-tips/cover.webp"
 date: "2026-02-20"
 ogImage:
-  url: "/assets/blog/inheritance-tax-saving-strategies-expert-tips/cover.png"
+  url: "/assets/blog/inheritance-tax-saving-strategies-expert-tips/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---

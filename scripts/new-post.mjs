@@ -127,7 +127,7 @@ category: "${category}"
     fs.writeFileSync(filePath, frontmatter);
     console.log(`\n✅ 새 글이 생성되었습니다: ${filePath}`);
     console.log(`✅ 이미지 폴더가 생성되었습니다: ${assetDirPath}`);
-    console.log('\n💡 /assets/blog/[slug]/ 경로에 cover.png를 꼭 넣어주세요!');
+    console.log('\n💡 /assets/blog/[slug]/ 경로에 cover.png를 넣고, 글 완성 후 npm run optimize-images 를 실행하세요! (WebP 자동 변환)');
 
     rl.close();
 }

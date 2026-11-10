@@ -1,13 +1,13 @@
 ---
 title: "[심층분석] 엔비디아(NVDA) 실적 발표, AI 반도체 독주는 언제까지 계속될까?"
 excerpt: "엔비디아의 압도적 매출 성장과 6조 원 충당금을 이겨낸 괴물 같은 체력 분석. 특히 트럼프 정부의 중국 수출 조건부 승인이 가져올 초대형 호재를 짚어봅니다."
-coverImage: "/assets/blog/nvidia/cover.jpg"
+coverImage: "/assets/blog/nvidia/cover.webp"
 date: "2025-12-10"
 ogImage:
   url: "/assets/blog/nvidia/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "stock-analysis"
 ---

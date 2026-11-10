@@ -1,13 +1,13 @@
 ---
 title: "[시장 분석] 미·일 금리차 축소? 한국 금융시장에 어떤 일이 벌어질까?"
 excerpt: "최근 일본 국채 금리가 급등하면서 엔화 강세와 캐리 트레이드 청산 가능성이 다시 부각되고 있다. 이 흐름이 글로벌 자금 이동과 한국 증시에 어떤 영향을 주는지 정리한다."
-coverImage: "/assets/blog/yen-strength-global-market-impact/cover.png"
+coverImage: "/assets/blog/yen-strength-global-market-impact/cover.webp"
 date: "2025-12-17"
 ogImage:
-  url: "/assets/blog/yen-strength-global-market-impact/cover.png"
+  url: "/assets/blog/yen-strength-global-market-impact/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "market-analysis"
 ---

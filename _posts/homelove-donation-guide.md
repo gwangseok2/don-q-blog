@@ -1,13 +1,13 @@
 ---
 title: "“기부인데 돌려받는다?” 10만 원 기부 → 13만 혜택! 고향사랑기부제 핵심 정리"
 excerpt: "10만원만 기부하면 세액공제 100%에 3만원 상당의 답례품까지! 연말정산 시즌, 직장인이 놓치면 안 될 '가성비 최고' 절세 제도를 쉽게 알려드립니다."
-coverImage: "/assets/blog/homelove-donation-guide/cover.jpg"
+coverImage: "/assets/blog/homelove-donation-guide/cover.webp"
 date: "2025-12-14"
 ogImage:
   url: "/assets/blog/homelove-donation-guide/cover.jpg"
 author:
   name: "돈큐"
-  picture: "/assets/blog/authors/donq.png"
+  picture: "/assets/blog/authors/donq.webp"
 preview: false
 category: "common-tip"
 ---
