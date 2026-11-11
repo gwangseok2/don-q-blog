@@ -7,6 +7,7 @@ import cn from "classnames";
 import "./globals.css";
 import SidebarWrapper from "@/app/_components/side-bar-wrapper"; // 🚨 Wrapper 임포트
 import Script from "next/script"; // next/script 임포트
+import { SRCDOC_PREVIEW_FIX } from "@/lib/srcdoc-preview-fix";
 
 import type { Viewport } from "next";
 
@@ -103,6 +104,8 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
+        {/* 애드센스 광고 설정 미리보기(srcdoc iframe) 호환 패치: 반드시 head 최상단, Next.js 스크립트보다 먼저 실행 */}
+        <script dangerouslySetInnerHTML={{ __html: SRCDOC_PREVIEW_FIX }} />
         {/* GA */}
         <Script
           // strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
