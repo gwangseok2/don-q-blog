@@ -31,6 +31,7 @@ import {
     type ChartData
 } from "chart.js";
 import { Line, Doughnut } from "react-chartjs-2";
+import { storageGet, storageSet } from "@/lib/safe-storage";
 
 ChartJS.register(
     CategoryScale,
@@ -97,7 +98,7 @@ export default function LottoPage() {
 
     // Load data from localStorage
     useEffect(() => {
-        const stored = localStorage.getItem("lottoStoreData");
+        const stored = storageGet("lottoStoreData");
         if (stored) {
             try {
                 const parsed = JSON.parse(stored);
@@ -112,7 +113,7 @@ export default function LottoPage() {
     // Save data to localStorage whenever it changes
     useEffect(() => {
         if (isLoaded) {
-            localStorage.setItem("lottoStoreData", JSON.stringify(data));
+            storageSet("lottoStoreData", JSON.stringify(data));
         }
     }, [data, isLoaded]);
 
