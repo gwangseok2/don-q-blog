@@ -10,7 +10,7 @@ name: Draft post
 
 on:
   schedule:
-    - cron: "0 0 * * 1,4" # 월·목 09:00 KST
+    - cron: "0 0 * * 1,3,5" # 월·수·금 09:00 KST
   workflow_dispatch:
     inputs:
       topic:
