@@ -2,6 +2,7 @@
 
 import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+import { storageGet, storageSet } from "@/lib/safe-storage";
 
 declare global {
   var updateDOM: () => void;
@@ -38,7 +39,11 @@ export const NoFOUCScript = (storageKey: string) => {
   /** function to add remove dark class */
   window.updateDOM = () => {
     const restoreTransitions = modifyTransition();
-    const mode = localStorage.getItem(storageKey) ?? SYSTEM;
+    /* iframe 등에서 저장소 접근이 막히면 SecurityError가 나므로 try/catch 필수 */
+    let mode = SYSTEM;
+    try {
+      mode = localStorage.getItem(storageKey) ?? SYSTEM;
+    } catch (e) {}
     const systemMode = media.matches ? DARK : LIGHT;
     const resolvedMode = mode === SYSTEM ? systemMode : mode;
     const classList = document.documentElement.classList;
@@ -59,8 +64,7 @@ let updateDOM: () => void;
 const Switch = () => {
   const [mode, setMode] = useState<ColorSchemePreference>(
     () =>
-      ((typeof localStorage !== "undefined" &&
-        localStorage.getItem(STORAGE_KEY)) ??
+      ((typeof window !== "undefined" && storageGet(STORAGE_KEY)) ||
         "system") as ColorSchemePreference,
   );
 
@@ -74,8 +78,9 @@ const Switch = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, mode);
-    updateDOM();
+    storageSet(STORAGE_KEY, mode);
+    // 주입 스크립트가 실패해 window.updateDOM이 없을 수 있으므로 방어
+    (updateDOM ?? window.updateDOM)?.();
   }, [mode]);
 
   /** toggle mode */

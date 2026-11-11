@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Heart, MessageSquare, Send } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { storageGet, storageGetJSON, storageSet } from "@/lib/safe-storage";
 
 interface Comment {
     id: number;
@@ -25,7 +26,7 @@ export default function PostInteractions({ slug }: { slug: string }) {
         fetchComments();
 
         // 로컬 스토리지에서 공감 여부 확인
-        const likedPosts = JSON.parse(localStorage.getItem("liked_posts") || "[]");
+        const likedPosts = storageGetJSON<string[]>("liked_posts", []);
         if (likedPosts.includes(slug)) {
             setHasLiked(true);
         }
@@ -71,10 +72,10 @@ export default function PostInteractions({ slug }: { slug: string }) {
             if (error && error.code !== "23505") throw error;
 
             // 로컬 스토리지에 저장
-            const likedPosts = JSON.parse(localStorage.getItem("liked_posts") || "[]");
+            const likedPosts = storageGetJSON<string[]>("liked_posts", []);
             if (!likedPosts.includes(slug)) {
                 likedPosts.push(slug);
-                localStorage.setItem("liked_posts", JSON.stringify(likedPosts));
+                storageSet("liked_posts", JSON.stringify(likedPosts));
             }
             setHasLiked(true);
             fetchLikes();
@@ -90,7 +91,7 @@ export default function PostInteractions({ slug }: { slug: string }) {
         if (!authorName.trim() || !newComment.trim() || isSubmitting) return;
 
         // 댓글 테러 방지: 30초 쿨타임
-        const lastComment = localStorage.getItem("last_comment_time");
+        const lastComment = storageGet("last_comment_time");
         const now = Date.now();
         if (lastComment && now - parseInt(lastComment) < 30000) {
             alert("댓글은 30초마다 작성할 수 있습니다. 잠시 후 다시 시도해 주세요.");
@@ -105,7 +106,7 @@ export default function PostInteractions({ slug }: { slug: string }) {
 
             if (error) throw error;
 
-            localStorage.setItem("last_comment_time", now.toString());
+            storageSet("last_comment_time", now.toString());
             setNewComment("");
             fetchComments();
         } catch (e) {

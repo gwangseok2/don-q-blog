@@ -7,6 +7,7 @@ import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { storageGetJSON } from "@/lib/safe-storage";
 
 type Props = {
   title: string;
@@ -43,7 +44,7 @@ export function PostPreview({
         if (commentsCnt !== null) setCommentsCount(commentsCnt);
 
         // 로컬 스토리지에서 공감 여부 확인
-        const likedPosts = JSON.parse(localStorage.getItem("liked_posts") || "[]");
+        const likedPosts = storageGetJSON<string[]>("liked_posts", []);
         if (likedPosts.includes(slug)) {
           setHasLiked(true);
         }
