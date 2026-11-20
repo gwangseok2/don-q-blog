@@ -1,6 +1,6 @@
 ---
-title: "[영등포] 얼큰함이 남다른 '정솔닭한마리' ㅣ 영등포역 맛집"
-excerpt: "블루리본 받은 영등포역 닭한마리 맛집 ㅣ 정솔닭한마리 솔직 방문후기🤍"
+title: "[영등포 닭한마리] 생생정보통·맛있는녀석들 나온 '정솔닭한마리' ㅣ 영등포역 맛집"
+excerpt: "블루리본 받고 생생정보통·맛있는녀석들에도 나온 영등포역 닭한마리 맛집 정솔닭한마리! 얼큰한 국물과 부추 소스, 떡·칼국수 사리, 날치알 볶음밥까지 솔직 방문후기🤍"
 coverImage: "/assets/blog/yeongdeungpo-review1/cover.webp"
 date: "2026-04-16"
 ogImage:
@@ -17,23 +17,23 @@ category: "food-review"
 깔끔한 맛을 떠올리게 되지않나요?  
 하지만 정솔닭한마리는 완전히 다른 느낌의 닭한마리 맛집이예요!
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_17.webp)
+![정솔닭한마리 얼큰한 닭한마리 냄비](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_17.webp)
 
 ---
 
 ## 📍 위치 및 정보
 
-- **주소:** 서울 영등포구 영중로10길 12 1층
-- **주요 메뉴:** 닭한마리(2인 - 31,000원), 한마리반(3인 - 46,000원)
-- **한줄평:** 국물이 맑은 듯하면서도 진하고, 깔끔하면서도 얼큰한 국물이 포인트👍
+- <strong>주소:</strong> 서울 영등포구 영중로10길 12 1층
+- <strong>주요 메뉴:</strong> 닭한마리(2인 - 31,000원), 한마리반(3인 - 46,000원)
+- <strong>한줄평:</strong> 국물이 맑은 듯하면서도 진하고, 깔끔하면서도 얼큰한 국물이 포인트👍
 
 ---
 
 ## ✨정솔닭한마리만의 특별한 포인트✨
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_09.webp)
+![정솔닭한마리 닭한마리와 칼국수사리가 끓는 냄비](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_09.webp)
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_16.webp)
+![부추 소스에 찍은 닭고기](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_16.webp)
 
 ### 1. 맑은 국물과는 차원이 다른 '얼근함+시원함'
 
@@ -44,7 +44,7 @@ category: "food-review"
 자극적으로 맵기만 한 게 아니라,  
 뒷맛이 아주 깔끔하고 시원해서 계속 국물을 떠먹게 되는 중독성이 있어서 더 좋아요~
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_13.webp)
+![간장·식초·겨자·다대기에 부추를 넣은 소스](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_13.webp)
 
 ### 2. 입맛 돋우는 매콤 부추 소스
 
@@ -53,7 +53,7 @@ category: "food-review"
 잘 익은 닭고기를 이 부추 소스에 푹 찍어 먹으면  
 알싸~한 맛이 부드러운 닭고기와 환상적인 궁합을 자랑해요👏👏
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_12.webp)
+![닭한마리 국물에 익은 떡사리](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_12.webp)
 
 ### 3. 떡사리와 칼국수사리 추가는 필수중의 필수!!
 
@@ -63,7 +63,7 @@ category: "food-review"
 국물이 진해지면서 걸쭉해지는데 왜 처음부터 같이 끓이는지 알 것 같더라구요~  
 진짜 너무너무 맛있어요..!!
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_19.webp)
+![볶음밥용 밥과 부추, 날치알](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_19.webp)
 
 ### 4. 마무리로는 날치알 볶음밥
 
@@ -71,17 +71,17 @@ category: "food-review"
 정솔닭한마리를 완벽하게 먹었다고 할 수 있어요!!  
 아무리 배가 불러도 다 먹게 되는 마성의 K-디저트거든요~😊
 
-![이미지 설명](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_22.webp)
+![냄비에 볶은 날치알 볶음밥](/assets/blog/yeongdeungpo-review1/KakaoTalk_20260415_221907779_22.webp)
 
 ---
 
 ## 🔍 방문 전 참고!
 
-- **주차 불가**
-- **단체 이용 가능**
-- **남/여 화장실 구분**
-- **저녁시간(금/토) 웨이팅 필수**
-- **맛있는녀석들 48회/생생정보통 501회**
+- <strong>주차 불가</strong>
+- <strong>단체 이용 가능</strong>
+- <strong>남/여 화장실 구분</strong>
+- <strong>저녁시간(금/토) 웨이팅 필수</strong>
+- <strong>맛있는녀석들 48회/생생정보통 501회</strong>
 
 ---
 
@@ -89,5 +89,5 @@ category: "food-review"
 
 속이 확~ 풀리는 얼큰한 국물이 생각날 때나  
 으슬으슬 몸보신이 필요할 때 정말 완벽한 곳이니,  
-영등포역 근처에 오신다면 **정솔닭한마리**에서  
+영등포역 근처에 오신다면 <strong>정솔닭한마리</strong>에서  
 든든하고 기분 좋은 한 끼를 꼭 드셔보시길 바랄게요!
