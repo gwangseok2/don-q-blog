@@ -35,7 +35,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post: any) => ({
     url: `${baseUrl}/posts/${post.slug}`,
-    lastModified: safeIso(post.date, "2025-01-01"),
+    // 본문을 고친 글은 frontmatter의 updated를 우선 사용
+    lastModified: safeIso(post.updated ?? post.date, "2025-01-01"),
     priority: 0.7,
   }));
 

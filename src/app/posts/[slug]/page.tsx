@@ -10,7 +10,7 @@ import { PostHeader } from "@/app/_components/post-header";
 import { BLOG_NAME, getBaseUrl } from "@/lib/constants";
 import Script from "next/script";
 import RelatedPosts from "@/app/_components/related-posts"; // 🚨 추가
-import { getPostsByCategory } from "@/lib/api"; // 🚨 추가
+import { getPostsByCategory, pickRelatedPosts } from "@/lib/api"; // 🚨 추가
 
 // Header 컴포넌트에서 정의된 유효한 슬러그 목록 정보를 import 합니다.
 import { CATEGORY_KEYS, CategorySlug } from "@/app/_components/header";
@@ -46,10 +46,9 @@ export default async function Post(props: Params) {
   // categoryName: Header에 전달할 사람이 읽을 수 있는 카테고리 이름
   const categoryName = safeCategorySlug ? CATEGORY_KEYS[safeCategorySlug] : undefined;
 
-  // 🚨 연관 포스트 가져오기: 현재 카테고리와 동일한 글 중 현재 글 제외
-  const relatedPosts = getPostsByCategory(rawCategorySlug)
-    .filter((p) => p.slug !== params.slug)
-    .slice(0, 4);
+  // 🚨 연관 포스트 가져오기: 같은 카테고리 최신 글 2개 + 현재 글 바로 이전 글 2개
+  // (최신 4개만 보여주면 오래된 글은 사이트 안에서 링크를 받지 못해서 섞어 보여줍니다)
+  const relatedPosts = pickRelatedPosts(getPostsByCategory(rawCategorySlug), params.slug, 4);
   // ------------------------------------------------------------------
 
   return (
@@ -69,7 +68,7 @@ export default async function Post(props: Params) {
               name: post.author.name,
             },
             datePublished: post.date,
-            dateModified: post.date,
+            dateModified: post.updated || post.date,
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": `${baseUrl}/posts/${params.slug}`,

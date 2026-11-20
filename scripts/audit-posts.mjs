@@ -13,8 +13,11 @@ const CATEGORY_SLUGS = [
 // 사용법
 //   node scripts/audit-posts.mjs                       전체 글 검사 (리포트만)
 //   node scripts/audit-posts.mjs --strict a.md b.md    지정한 글만 검사, 문제 있으면 exit 1 (CI용)
+//   --legacy-ok  이미 발행된 글을 수정할 때: 파일명 날짜 접두어·커버 경로 규칙은 건너뜀
+//                (URL과 이미지 경로를 바꾸면 검색 색인·공유 링크가 깨지므로)
 const argv = process.argv.slice(2);
 const STRICT = argv.includes('--strict');
+const LEGACY_OK = argv.includes('--legacy-ok');
 const TARGETS = argv.filter(a => !a.startsWith('--')).map(a => path.basename(a)).filter(f => f.endsWith('.md'));
 const MAX_IMAGE_BYTES = 1024 * 1024;
 
@@ -36,7 +39,7 @@ function audit() {
     // 1. Filename check
     const datePrefixRegex = /^\d{4}-\d{2}-\d{2}-/;
     const yearPrefixRegex = /^\d{4}-/;
-    if (datePrefixRegex.test(file) || yearPrefixRegex.test(file)) {
+    if (!LEGACY_OK && (datePrefixRegex.test(file) || yearPrefixRegex.test(file))) {
       issues.push(`Filename has date/year prefix: "${file}"`);
     }
 
@@ -60,7 +63,7 @@ function audit() {
     if (data.coverImage) {
       const coverImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.(png|jpe?g|webp)$`);
       const optimizedCoverImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.(png|jpe?g|webp)$`);
-      if (!coverImageRegex.test(data.coverImage) && !optimizedCoverImageRegex.test(data.coverImage)) {
+      if (!LEGACY_OK && !coverImageRegex.test(data.coverImage) && !optimizedCoverImageRegex.test(data.coverImage)) {
         issues.push(`coverImage path "${data.coverImage}" does not match "/assets/blog/[slug]/cover.(png|jpg|webp)"`);
       }
     } else {
@@ -70,7 +73,7 @@ function audit() {
     if (data.ogImage && data.ogImage.url) {
       const ogImageRegex = new RegExp(`^/assets/blog/${slug}/cover\\.(png|jpe?g|webp)$`);
       const optimizedOgImageRegex = new RegExp(`^/assets/blog/${expectedSlug}/cover\\.(png|jpe?g|webp)$`);
-      if (!ogImageRegex.test(data.ogImage.url) && !optimizedOgImageRegex.test(data.ogImage.url)) {
+      if (!LEGACY_OK && !ogImageRegex.test(data.ogImage.url) && !optimizedOgImageRegex.test(data.ogImage.url)) {
         issues.push(`ogImage.url path "${data.ogImage.url}" does not match "/assets/blog/[slug]/cover.(png|jpg|webp)"`);
       }
     } else {
@@ -80,6 +83,15 @@ function audit() {
     // 5. Date format
     if (!/^\d{4}-\d{2}-\d{2}$/.test(String(data.date || ''))) {
       issues.push(`date must be "YYYY-MM-DD": "${data.date}"`);
+    }
+    if (data.updated !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(String(data.updated))) {
+      issues.push(`updated must be "YYYY-MM-DD": "${data.updated}"`);
+    }
+
+    // 5-1. 이미지 alt에 의미 없는 기본 문구가 남아 있는지
+    const placeholderAlts = [...content.matchAll(/!\[(이미지 설명|image|)\]\(/g)].length;
+    if (placeholderAlts > 0) {
+      issues.push(`Image alt is empty or placeholder ("이미지 설명") in ${placeholderAlts} image(s)`);
     }
 
     // 6. Images exist and are <= 1MB (cover + body images under /assets/blog/)
