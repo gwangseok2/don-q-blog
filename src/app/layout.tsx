@@ -63,7 +63,8 @@ const jsonLd = {
   "@type": "Organization",
   name: BLOG_NAME,
   url: baseUrl,
-  logo: `${baseUrl}${HOME_OG_IMAGE_URL.url}`,
+  // HOME_OG_IMAGE_URL.url은 이미 절대 URL이라 baseUrl을 다시 붙이지 않습니다.
+  logo: HOME_OG_IMAGE_URL.url,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "",

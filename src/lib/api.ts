@@ -129,6 +129,31 @@ export function getPostsByCategory(categorySlug: string): Post[] {
   return filteredPosts;
 }
 
+/**
+ * "함께 읽으면 좋은 글" 목록을 고릅니다.
+ * - 같은 카테고리 최신 글 2개 + 현재 글 바로 이전(더 오래된) 글 2개
+ * - 이전 글이 부족하면(가장 오래된 글 등) 남은 글로 채웁니다.
+ * 최신 글만 보여주면 오래된 글이 사이트 안에서 링크를 받지 못하므로,
+ * 각 글이 바로 다음 글 2개에서 링크를 받도록 합니다.
+ * @param categoryPosts 날짜 내림차순으로 정렬된 같은 카테고리 글 (현재 글 포함 가능)
+ */
+export function pickRelatedPosts(categoryPosts: Post[], currentSlug: string, count = 4): Post[] {
+  const others = categoryPosts.filter((p) => p.slug !== currentSlug);
+  if (others.length <= count) return others;
+
+  const recentCount = Math.min(2, count);
+  const recent = others.slice(0, recentCount);
+  const recentSlugs = new Set(recent.map((p) => p.slug));
+
+  const currentIndex = categoryPosts.findIndex((p) => p.slug === currentSlug);
+  const olderNeighbors =
+    currentIndex >= 0 ? categoryPosts.slice(currentIndex + 1).filter((p) => !recentSlugs.has(p.slug)) : [];
+  const neighborSlugs = new Set(olderNeighbors.map((p) => p.slug));
+  const rest = others.filter((p) => !recentSlugs.has(p.slug) && !neighborSlugs.has(p.slug));
+
+  return [...recent, ...olderNeighbors, ...rest].slice(0, count);
+}
+
 // ------------------------------------------------------------------
 // 2. 카테고리 카운트 로직
 // ------------------------------------------------------------------

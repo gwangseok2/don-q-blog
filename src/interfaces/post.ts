@@ -4,6 +4,8 @@ export type Post = {
   slug: string;
   title: string;
   date: string;
+  // 본문을 의미 있게 고쳤을 때만 적는 수정일 (YYYY-MM-DD). sitemap lastmod, dateModified에 쓰입니다.
+  updated?: string;
   coverImage: string;
   author: Author;
   excerpt: string;
