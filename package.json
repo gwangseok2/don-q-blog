@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && node scripts/escape-astral-html.mjs out",
     "start": "next start",
     "new-post": "node scripts/new-post.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
