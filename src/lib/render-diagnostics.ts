@@ -10,6 +10,10 @@
  * CSS 주석으로 기록합니다. React가 오류 화면을 그릴 때도 <head>의 <style>은 지우지 않으므로
  * 스냅샷에 남습니다. 오류가 없는 일반 방문자에게는 화면에 아무것도 추가하지 않습니다.
  *
+ * 또한 React Flight 클라이언트가 "이미 pending이 아닌 조각"에 데이터를 넣으려 할 때
+ * (Object.prototype.enqueueModel getter에 닿는 경우) 예외 대신 기록하고 그 조각만 건너뜁니다.
+ * 정상 스트림 조각은 enqueueModel을 자기 속성으로 가지므로 이 getter에 닿지 않아 일반 방문자 영향은 없습니다.
+ *
  * 원인을 찾아 고친 뒤 이 파일과 layout.tsx의 사용 부분을 삭제합니다.
  */
 export const RENDER_DIAGNOSTICS = `(function(){try{
@@ -41,6 +45,8 @@ document.addEventListener('DOMContentLoaded',function(){log('DOMContentLoaded')}
 try{var P=ReadableStreamDefaultController.prototype,oc=P.close,oe=P.error;
 P.close=function(){log('stream close (desiredSize='+this.desiredSize+') scripts='+document.scripts.length);return oc.apply(this,arguments)};
 P.error=function(r){log('stream error: '+str(r).slice(0,300));return oe.apply(this,arguments)};}catch(e){}
+try{var em=0;function desc(o){try{var c=o&&o.constructor&&o.constructor.name,k=[];for(var p in o){if(k.length>14)break;k.push(p)}return (c||typeof o)+(o instanceof Error?'('+o.message+')':'')+' keys=['+k.join(',')+']'}catch(e){return '?'}}
+Object.defineProperty(Object.prototype,'enqueueModel',{configurable:true,enumerable:false,set:function(v){Object.defineProperty(this,'enqueueModel',{value:v,writable:true,configurable:true,enumerable:true})},get:function(){var o=this;return function(m){em++;if(em<=3)w('flight-recover','#'+em+' row for non-pending chunk ignored; reason='+desc(o)+' | model='+String(m).slice(0,300))}}});}catch(e){}
 addEventListener('error',function(e){
 var t=e.target;
 if(t&&t!==window&&(t.src||t.href)){log('resource-error <'+t.tagName+'> '+(t.src||t.href));return}
