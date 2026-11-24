@@ -13,13 +13,16 @@
  * 원인을 찾아 고친 뒤 이 파일과 layout.tsx의 사용 부분을 삭제합니다.
  */
 export const RENDER_DIAGNOSTICS = `(function(){try{
+self.__donqRuns=(self.__donqRuns||0)+1;
 var n=0,el=null,MAX=12;
 function str(a){try{if(a&&a.stack)return String(a.stack);if(a&&typeof a==='object')return JSON.stringify(a);return String(a)}catch(e){return String(a)}}
 function w(kind,msg){try{if(n>=MAX)return;n++;
 if(!el){el=document.createElement('style');el.id='donq-diag';(document.head||document.documentElement).appendChild(el);
-el.appendChild(document.createTextNode('/* ua: '+navigator.userAgent+' | href: '+location.href+' | t: '+Math.round(performance.now())+'ms */\\n'));}
+el.appendChild(document.createTextNode('/* ua: '+navigator.userAgent+' | href: '+location.href+' | t: '+Math.round(performance.now())+'ms | runs: '+self.__donqRuns+' */\\n'));}
 el.appendChild(document.createTextNode('/* '+kind+' @'+Math.round(performance.now())+'ms: '+String(msg).replace(/\\*\\//g,'* /').slice(0,2000)+' */\\n'));
 }catch(e){}}
+self.__donqDiag=w;
+if(self.__donqRuns>1)w('info','page script re-executed in the same window');
 addEventListener('error',function(e){
 var t=e.target;
 if(t&&t!==window&&(t.src||t.href)){w('resource-error','<'+t.tagName+'> '+(t.src||t.href));return}
