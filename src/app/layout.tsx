@@ -8,7 +8,8 @@ import "./globals.css";
 import SidebarWrapper from "@/app/_components/side-bar-wrapper"; // 🚨 Wrapper 임포트
 import Script from "next/script"; // next/script 임포트
 import { SRCDOC_PREVIEW_FIX } from "@/lib/srcdoc-preview-fix";
-import { RENDER_DIAGNOSTICS } from "@/lib/render-diagnostics"; // [임시 진단] 원인 수정 후 삭제
+import { RENDER_DIAGNOSTICS } from "@/lib/render-diagnostics"; // [임시 진단] 원인 수정 확인 후 삭제
+import { FLIGHT_REPLAY_GUARD } from "@/lib/flight-replay-guard";
 
 import type { Viewport } from "next";
 
@@ -108,8 +109,10 @@ export default function RootLayout({
       <head>
         {/* 애드센스 광고 설정 미리보기(srcdoc iframe) 호환 패치: 반드시 head 최상단, Next.js 스크립트보다 먼저 실행 */}
         <script dangerouslySetInnerHTML={{ __html: SRCDOC_PREVIEW_FIX }} />
-        {/* [임시 진단] 애드센스 미리보기 서버 렌더러의 오류를 <style id="donq-diag"> 주석으로 남김. 원인 수정 후 삭제 */}
+        {/* [임시 진단] 애드센스 미리보기 서버 렌더러의 오류를 <style id="donq-diag"> 주석으로 남김. 원인 수정 확인 후 삭제 */}
         <script dangerouslySetInnerHTML={{ __html: RENDER_DIAGNOSTICS }} />
+        {/* 애드센스 미리보기 렌더러가 페이지 스크립트를 다시 실행할 때 RSC 데이터 중복 주입 방지 (Next.js 인라인 데이터보다 먼저 실행) */}
+        <script dangerouslySetInnerHTML={{ __html: FLIGHT_REPLAY_GUARD }} />
         {/* GA */}
         <Script
           // strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
