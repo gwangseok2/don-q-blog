@@ -35,6 +35,24 @@ var res={};performance.getEntriesByType('resource').forEach(function(r){if(r.nam
 var dup=Object.keys(res).filter(function(k){return res[k]>1});
 el.appendChild(document.createTextNode('/* next resources: '+Object.keys(res).length+' files, fetched more than once: '+clean(JSON.stringify(dup))+' */\\n'));
 el.appendChild(document.createTextNode('/* events: '+clean(ev.join(' | ')).slice(0,4000)+' */\\n'));
+}catch(e){}
+try{
+function u8(s){var c,b=0;for(var i=0;i<s.length;i++){c=s.charCodeAt(i);if(c<128)b+=1;else if(c<2048)b+=2;else if(c>=0xD800&&c<=0xDBFF&&i+1<s.length&&(s.charCodeAt(i+1)&0xFC00)===0xDC00){b+=4;i++}else b+=3}return b}
+var te='?';try{var E=new TextEncoder();te='han='+E.encode('\\uD55C').length+' emoji='+E.encode('\\uD83D\\uDE00').length+' native='+/\\[native code\\]/.test(Function.prototype.toString.call(TextEncoder.prototype.encode))}catch(x){te='err '+x.message}
+var td='?';try{td=new TextDecoder().decode(new Uint8Array([237,149,156]))==='\\uD55C'?'ok':'bad'}catch(x){td='err '+x.message}
+var mism=0,first='',segs=(g.__next_f&&g.__next_f.__donqSegs)||[];try{var E2=new TextEncoder();segs.forEach(function(s,i){if(!s||typeof s[1]!=='string')return;var a=E2.encode(s[1]).length,b=u8(s[1]);if(a!==b){mism++;if(!first)first='first #'+i+' TextEncoder='+a+' utf8='+b}})}catch(x){}
+el.appendChild(document.createTextNode('/* encoding: charset='+document.characterSet+' | TextEncoder '+te+' | TextDecoder '+td+' | segments checked '+segs.length+', byte-length mismatches '+mism+' '+first+' */\\n'));
+var all='';segs.forEach(function(s){if(s&&s[0]===1&&typeof s[1]==='string')all+=s[1]});
+var bytes=new TextEncoder().encode(all),p=0,rows=0,bad='';
+function asc(a,b){var r='';for(var k=a;k<b&&k<bytes.length;k++)r+=String.fromCharCode(bytes[k]);return r}
+while(p<bytes.length&&rows<5000){var c0=p;while(p<bytes.length&&bytes[p]!==58)p++;var id=asc(c0,p);
+if(!/^[0-9a-f]*$/.test(id)){bad='row #'+rows+' at byte '+c0+': invalid row id '+JSON.stringify(id.slice(0,40));break}
+p++;var tag=bytes[p];
+if(tag===84){p++;var h0=p;while(p<bytes.length&&bytes[p]!==44)p++;var len=parseInt(asc(h0,p),16);p++;var end=p+len;
+var after=asc(end,end+12);if(end<bytes.length&&!/^[0-9a-f]+:/.test(after)){bad='T row '+id+' (#'+rows+') declares '+len+' bytes; next bytes '+JSON.stringify(after)+' | text tail '+JSON.stringify(new TextDecoder().decode(bytes.slice(Math.max(p,end-60),end)))+' | following '+JSON.stringify(new TextDecoder().decode(bytes.slice(end,end+60)));break}
+p=end}else{while(p<bytes.length&&bytes[p]!==10)p++;p++}
+rows++}
+el.appendChild(document.createTextNode('/* rsc rows parsed '+rows+' of '+bytes.length+' bytes | '+(bad?clean(bad).slice(0,1200):'no framing problem found')+' */\\n'));
 }catch(e){}}
 }catch(e){}}
 g.__donqDiag=w;
