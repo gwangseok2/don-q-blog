@@ -8,6 +8,7 @@ import "./globals.css";
 import SidebarWrapper from "@/app/_components/side-bar-wrapper"; // 🚨 Wrapper 임포트
 import Script from "next/script"; // next/script 임포트
 import { SRCDOC_PREVIEW_FIX } from "@/lib/srcdoc-preview-fix";
+import { RENDER_DIAGNOSTICS } from "@/lib/render-diagnostics"; // [임시 진단] 원인 수정 후 삭제
 
 import type { Viewport } from "next";
 
@@ -107,6 +108,8 @@ export default function RootLayout({
       <head>
         {/* 애드센스 광고 설정 미리보기(srcdoc iframe) 호환 패치: 반드시 head 최상단, Next.js 스크립트보다 먼저 실행 */}
         <script dangerouslySetInnerHTML={{ __html: SRCDOC_PREVIEW_FIX }} />
+        {/* [임시 진단] 애드센스 미리보기 서버 렌더러의 오류를 <style id="donq-diag"> 주석으로 남김. 원인 수정 후 삭제 */}
+        <script dangerouslySetInnerHTML={{ __html: RENDER_DIAGNOSTICS }} />
         {/* GA */}
         <Script
           // strategy="afterInteractive" // 중요: 상호 작용 후 로드하여 성능 개선
