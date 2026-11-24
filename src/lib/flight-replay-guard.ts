@@ -34,6 +34,7 @@ return true}
 function push(){for(var i=0;i<arguments.length;i++){var s=arguments[i];if(!accept(s))continue;if(inner)inner(s);else Array.prototype.push.call(arr,s)}return arr.length}
 Object.defineProperty(arr,'push',{configurable:true,get:function(){return push},set:function(fn){sets++;log('next attached push handler #'+sets+' after '+got.length+' segments, readyState='+rs());inner=fn}});
 Object.defineProperty(arr,'__donqGuard',{value:true});
+Object.defineProperty(arr,'__donqSegs',{get:function(){return got}});
 Object.defineProperty(arr,'__donqStats',{get:function(){return {pushes:pushes,received:got.length,handlerSets:sets,dupes:dupes,firstDupe:firstDupe,replay:replay,dropped:dropped}}});
 g.__next_f=arr;
 }catch(e){}})();`;
